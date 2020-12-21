@@ -1,0 +1,82 @@
+cmake_minimum_required (VERSION 3.10.3)
+project (zchecker)
+
+include(CheckLanguage)
+check_language(CUDA)
+if(CMAKE_CUDA_COMPILER)
+    enable_language(CUDA)
+endif()
+
+set (CMAKE_DISABLE_SOURCE_CHANGES ON)
+set (CMAKE_DISABLE_IN_SOURCE_BUILD ON)
+
+set (CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+set (EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set (LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
+SET(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -Xcompiler=-Wall")
+
+include_directories (${CMAKE_CURRENT_SOURCE_DIR}/zc/include)
+
+if (NOT DEFINED CMAKE_CUDA_STANDARD)
+    set(CMAKE_CUDA_STANDARD 11)
+    set(CMAKE_CUDA_STANDARD_REQUIRED True)
+endif ()
+
+#find_package (MPI)
+#if (MPI_FOUND)
+#  set (CMAKE_C_COMPILER ${MPI_C_COMPILER})
+#  set (CMAKE_CXX_COMPILER ${MPI_CXX_COMPILER})
+#  add_definitions (-DHAVE_MPI)
+#endif ()
+#
+#find_package (R)
+#if (R_FOUND)
+#  include_directories (${R_INCLUDE_DIR})
+#  add_definitions (-DHAVE_R)
+#endif ()
+#
+#find_package (ZLIB REQUIRED)
+#include_directories (${ZLIB_INCLUDE_DIRS})
+#
+#find_package (SZ)
+#if (SZ_FOUND)
+#  include_directories (${SZ_INCLUDES})
+#endif ()
+#
+#find_package (FFTW)
+#if (FFTW_FOUND)
+#  include_directories (${FFTW_INCLUDES})
+#  add_definitions (-DHAVE_FFTW3)
+#endif ()
+#
+#find_package (NETCDF)
+#if (NETCDF_FOUND)
+#  include_directories (${NETCDF_INCLUDE_DIRS})
+#endif ()
+#
+#find_package (RocksDB)
+#if (RocksDB_FOUND)
+#  include_directories (${RocksDB_INCLUDE_DIR})
+#  add_definitions (-DHAVE_ROCKSDB)
+#else ()
+#  find_package (LevelDB)
+#  if (LevelDB_FOUND)
+#    include_directories (${LevelDB_INCLUDE_DIR})
+#    add_definitions (-DHAVE_LEVELDB)
+#  endif ()
+#endif ()
+
+find_package (Threads REQUIRED)
+find_package (Boost COMPONENTS system)
+
+if (Boost_SYSTEM_FOUND)
+  set (CMAKE_CXX_STANDARD 11)
+  set (CMAKE_CXX_STANDARD_REQUIRED ON)
+  include_directories (${Boost_INCLUDE_DIRS})
+  include_directories (${CMAKE_CURRENT_SOURCE_DIR}/zserver)
+  add_definitions (-DHAVE_ONLINEVIS)
+  add_subdirectory (zserver)
+endif ()
+
+add_subdirectory (zc)
+add_subdirectory (examples)

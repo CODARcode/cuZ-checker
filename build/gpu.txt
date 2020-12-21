@@ -1,0 +1,6 @@
+cfgFile=zc.config
+oriFilePath=Datasets/QCLOUDf01.dat
+decFilePath=Datasets/QCLOUDf01.dat.sz.out
+[ZC] Configuration file NOT accessible.
+[ZC] ERROR: Impossible to read configuration.
+Failed to open input file. 1

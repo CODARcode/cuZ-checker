@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <title>compressionVis</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.min.css" />
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.min.js'></script>
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.jQueryUI.min.js'></script>
+
+    <script src="js/lib/d3.v4.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/highcharts.js"></script>
+  </head>
+
+  <body>
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" id='connectDialog'>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id='connect-dialog-title'>Connect to Simulation</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id='close-dialog-cross'><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Host</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="hostAddr" placeholder="IP Address" value='localhost'>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Port</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="port" placeholder="Port" value='9091'>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id='close-dialog'>Close</button>
+            <button type="submit" class="btn btn-primary" id='connect'>Connect</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!--
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">ECP Compressor Visualization Tool</a>
+        </div>
+      </div>
+    </div>
+    -->
+
+    <div class="grid-stack">
+    </div>
+
+    <script type="text/javascript">
+    $(function () {
+        var options = {
+            cellHeight: 80,
+            verticalMargin: 10
+        };
+        $('.grid-stack').gridstack(options);
+    });
+    </script>
+
+    <script src="js/client.js"></script>
+    <script src="js/gui.js"></script>
+  </body>
+</html>
