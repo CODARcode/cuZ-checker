@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/testRscript_float.dir/testRscript_float.c.o -o ../bin/testRscript_float  -Wl,-rpath,/homes/xyu/cuZC/Z-checker/build/lib ../lib/libzc.so 

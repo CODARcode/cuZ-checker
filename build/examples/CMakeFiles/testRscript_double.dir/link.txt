@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/testRscript_double.dir/testRscript_double.c.o -o ../bin/testRscript_double  -Wl,-rpath,/homes/xyu/cuZC/Z-checker/build/lib ../lib/libzc.so 
