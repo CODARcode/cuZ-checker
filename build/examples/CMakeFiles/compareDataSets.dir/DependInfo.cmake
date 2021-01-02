@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CUDA
-  "/homes/xyu/cuZC/Z-checker/examples/compareDataSets.cu" "/homes/xyu/cuZC/Z-checker/build/examples/CMakeFiles/compareDataSets.dir/compareDataSets.cu.o"
+  "/homes/xyu/cuZ-checker/cuZ-checker/examples/compareDataSets.cu" "/homes/xyu/cuZ-checker/cuZ-checker/build/examples/CMakeFiles/compareDataSets.dir/compareDataSets.cu.o"
   )
 set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
 
@@ -15,7 +15,7 @@ set(CMAKE_CUDA_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/homes/xyu/cuZC/Z-checker/build/zc/src/CMakeFiles/zc.dir/DependInfo.cmake"
+  "/homes/xyu/cuZ-checker/cuZ-checker/build/zc/src/CMakeFiles/zc.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

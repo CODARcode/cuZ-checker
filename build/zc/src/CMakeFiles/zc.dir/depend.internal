@@ -3,16 +3,16 @@
 
 zc/src/CMakeFiles/zc.dir/DynamicByteArray.c.o
  ../zc/include/DynamicByteArray.h
- /homes/xyu/cuZC/Z-checker/zc/src/DynamicByteArray.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/DynamicByteArray.c
 zc/src/CMakeFiles/zc.dir/DynamicDoubleArray.c.o
  ../zc/include/DynamicDoubleArray.h
- /homes/xyu/cuZC/Z-checker/zc/src/DynamicDoubleArray.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/DynamicDoubleArray.c
 zc/src/CMakeFiles/zc.dir/DynamicFloatArray.c.o
  ../zc/include/DynamicFloatArray.h
- /homes/xyu/cuZC/Z-checker/zc/src/DynamicFloatArray.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/DynamicFloatArray.c
 zc/src/CMakeFiles/zc.dir/DynamicIntArray.c.o
  ../zc/include/DynamicIntArray.h
- /homes/xyu/cuZC/Z-checker/zc/src/DynamicIntArray.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/DynamicIntArray.c
 zc/src/CMakeFiles/zc.dir/ZC_ByteToolkit.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -29,7 +29,7 @@ zc/src/CMakeFiles/zc.dir/ZC_ByteToolkit.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_ByteToolkit.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_ByteToolkit.c
 zc/src/CMakeFiles/zc.dir/ZC_CompareData.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -49,7 +49,7 @@ zc/src/CMakeFiles/zc.dir/ZC_CompareData.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_CompareData.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_CompareData.c
 zc/src/CMakeFiles/zc.dir/ZC_DataProperty.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -67,7 +67,7 @@ zc/src/CMakeFiles/zc.dir/ZC_DataProperty.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_DataProperty.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_DataProperty.c
 zc/src/CMakeFiles/zc.dir/ZC_DataProperty_double.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -85,7 +85,7 @@ zc/src/CMakeFiles/zc.dir/ZC_DataProperty_double.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_DataProperty_double.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_DataProperty_double.c
 zc/src/CMakeFiles/zc.dir/ZC_DataProperty_float.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -103,7 +103,7 @@ zc/src/CMakeFiles/zc.dir/ZC_DataProperty_float.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_DataProperty_float.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_DataProperty_float.c
 zc/src/CMakeFiles/zc.dir/ZC_DataSetHandler.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -120,7 +120,7 @@ zc/src/CMakeFiles/zc.dir/ZC_DataSetHandler.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_DataSetHandler.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_DataSetHandler.c
 zc/src/CMakeFiles/zc.dir/ZC_Hashtable.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -137,7 +137,7 @@ zc/src/CMakeFiles/zc.dir/ZC_Hashtable.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_Hashtable.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_Hashtable.c
 zc/src/CMakeFiles/zc.dir/ZC_ReportGenerator.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -157,7 +157,7 @@ zc/src/CMakeFiles/zc.dir/ZC_ReportGenerator.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_ReportGenerator.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_ReportGenerator.c
 zc/src/CMakeFiles/zc.dir/ZC_conf.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -175,7 +175,7 @@ zc/src/CMakeFiles/zc.dir/ZC_conf.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_conf.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_conf.c
 zc/src/CMakeFiles/zc.dir/ZC_gnuplot.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -193,7 +193,7 @@ zc/src/CMakeFiles/zc.dir/ZC_gnuplot.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_gnuplot.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_gnuplot.c
 zc/src/CMakeFiles/zc.dir/ZC_latex.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -211,7 +211,7 @@ zc/src/CMakeFiles/zc.dir/ZC_latex.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_latex.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_latex.c
 zc/src/CMakeFiles/zc.dir/ZC_quicksort.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -229,7 +229,7 @@ zc/src/CMakeFiles/zc.dir/ZC_quicksort.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_quicksort.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_quicksort.c
 zc/src/CMakeFiles/zc.dir/ZC_rw.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -247,7 +247,7 @@ zc/src/CMakeFiles/zc.dir/ZC_rw.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_rw.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_rw.c
 zc/src/CMakeFiles/zc.dir/ZC_ssim.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -264,7 +264,7 @@ zc/src/CMakeFiles/zc.dir/ZC_ssim.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_ssim.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_ssim.c
 zc/src/CMakeFiles/zc.dir/ZC_util.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -282,14 +282,14 @@ zc/src/CMakeFiles/zc.dir/ZC_util.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_util.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_util.c
 zc/src/CMakeFiles/zc.dir/dictionary.c.o
  ../zc/include/dictionary.h
- /homes/xyu/cuZC/Z-checker/zc/src/dictionary.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/dictionary.c
 zc/src/CMakeFiles/zc.dir/iniparser.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
- /homes/xyu/cuZC/Z-checker/zc/src/iniparser.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/iniparser.c
 zc/src/CMakeFiles/zc.dir/zc.c.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -309,7 +309,7 @@ zc/src/CMakeFiles/zc.dir/zc.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/zc.c
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/zc.c
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -329,6 +329,8 @@ zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o
  ../zc/include/ZC_util.h
  ../zc/include/cuZC_entry.h
  ../zc/include/cuZC_ssim.h
+ ../zc/include/cuZC_typeOne.h
+ ../zc/include/cuZC_typeTwo.h
  ../zc/include/der.hpp
  ../zc/include/dictionary.h
  ../zc/include/idx.hpp
@@ -342,7 +344,7 @@ zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o
  ../zc/include/others.hpp
  ../zc/include/ssim.hpp
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_CompareData_double.cpp
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_CompareData_double.cpp
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -362,6 +364,8 @@ zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o
  ../zc/include/ZC_util.h
  ../zc/include/cuZC_entry.h
  ../zc/include/cuZC_ssim.h
+ ../zc/include/cuZC_typeOne.h
+ ../zc/include/cuZC_typeTwo.h
  ../zc/include/der.hpp
  ../zc/include/dictionary.h
  ../zc/include/idx.hpp
@@ -375,10 +379,12 @@ zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o
  ../zc/include/others.hpp
  ../zc/include/ssim.hpp
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/ZC_CompareData_float.cpp
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/ZC_CompareData_float.cpp
 zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o
  ../zc/include/cuZC_entry.h
  ../zc/include/cuZC_ssim.h
+ ../zc/include/cuZC_typeOne.h
+ ../zc/include/cuZC_typeTwo.h
  ../zc/include/der.hpp
  ../zc/include/idx.hpp
  ../zc/include/m_basic.hpp
@@ -390,10 +396,12 @@ zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o
  ../zc/include/others.hpp
  ../zc/include/ssim.hpp
  ../zc/include/timingGPU.h
- /homes/xyu/cuZC/Z-checker/zc/src/cuZC_entry.cu
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/cuZC_entry.cu
 zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o
  ../zc/include/cuZC_entry.h
  ../zc/include/cuZC_ssim.h
+ ../zc/include/cuZC_typeOne.h
+ ../zc/include/cuZC_typeTwo.h
  ../zc/include/der.hpp
  ../zc/include/idx.hpp
  ../zc/include/m_basic.hpp
@@ -404,10 +412,42 @@ zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o
  ../zc/include/norm.hpp
  ../zc/include/others.hpp
  ../zc/include/ssim.hpp
- /homes/xyu/cuZC/Z-checker/zc/src/cuZC_ssim.cu
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/cuZC_ssim.cu
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o
+ ../zc/include/cuZC_entry.h
+ ../zc/include/cuZC_ssim.h
+ ../zc/include/cuZC_typeOne.h
+ ../zc/include/cuZC_typeTwo.h
+ ../zc/include/der.hpp
+ ../zc/include/idx.hpp
+ ../zc/include/m_basic.hpp
+ ../zc/include/m_der.hpp
+ ../zc/include/m_der_metrics.hpp
+ ../zc/include/m_norm.hpp
+ ../zc/include/matrix.hpp
+ ../zc/include/norm.hpp
+ ../zc/include/others.hpp
+ ../zc/include/ssim.hpp
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/cuZC_typeOne.cu
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o
+ ../zc/include/cuZC_entry.h
+ ../zc/include/cuZC_ssim.h
+ ../zc/include/cuZC_typeOne.h
+ ../zc/include/cuZC_typeTwo.h
+ ../zc/include/der.hpp
+ ../zc/include/idx.hpp
+ ../zc/include/m_basic.hpp
+ ../zc/include/m_der.hpp
+ ../zc/include/m_der_metrics.hpp
+ ../zc/include/m_norm.hpp
+ ../zc/include/matrix.hpp
+ ../zc/include/norm.hpp
+ ../zc/include/others.hpp
+ ../zc/include/ssim.hpp
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/cuZC_typeTwo.cu
 zc/src/CMakeFiles/zc.dir/timingGPU.cu.o
  ../zc/include/timingGPU.h
- /homes/xyu/cuZC/Z-checker/zc/src/timingGPU.cu
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/timingGPU.cu
 zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o
  ../zc/include/DynamicDoubleArray.h
  ../zc/include/DynamicFloatArray.h
@@ -423,6 +463,8 @@ zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o
  ../zc/include/ZC_rw.h
  ../zc/include/cuZC_entry.h
  ../zc/include/cuZC_ssim.h
+ ../zc/include/cuZC_typeOne.h
+ ../zc/include/cuZC_typeTwo.h
  ../zc/include/der.hpp
  ../zc/include/dictionary.h
  ../zc/include/idx.hpp
@@ -436,4 +478,4 @@ zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o
  ../zc/include/others.hpp
  ../zc/include/ssim.hpp
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/zc/src/zc_derivativeMetrics.cpp
+ /homes/xyu/cuZ-checker/cuZ-checker/zc/src/zc_derivativeMetrics.cpp

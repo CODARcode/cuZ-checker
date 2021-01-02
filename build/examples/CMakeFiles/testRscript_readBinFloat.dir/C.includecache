@@ -126,11 +126,11 @@ ZC_conf.h
 mpi.h
 -
 
-/homes/xyu/cuZC/Z-checker/examples/testRscript_readBinFloat.c
+/homes/xyu/cuZ-checker/cuZ-checker/examples/testRscript_readBinFloat.c
 stdio.h
 -
 stdlib.h
 -
 zc.h
-/homes/xyu/cuZC/Z-checker/examples/zc.h
+/homes/xyu/cuZ-checker/cuZ-checker/examples/zc.h
 

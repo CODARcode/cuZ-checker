@@ -67,10 +67,10 @@ RM = /lambda_stor/homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /homes/xyu/cuZC/Z-checker
+CMAKE_SOURCE_DIR = /homes/xyu/cuZ-checker/cuZ-checker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /homes/xyu/cuZC/Z-checker/build
+CMAKE_BINARY_DIR = /homes/xyu/cuZ-checker/cuZ-checker/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -145,14 +145,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /homes/xyu/cuZC/Z-checker/build && $(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles /homes/xyu/cuZC/Z-checker/build/zc/src//CMakeFiles/progress.marks
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles /homes/xyu/cuZ-checker/cuZ-checker/build/zc/src//CMakeFiles/progress.marks
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/clean
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -162,22 +162,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/preinstall
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/preinstall
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /homes/xyu/cuZC/Z-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 zc/src/CMakeFiles/zc.dir/rule:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/CMakeFiles/zc.dir/rule
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/CMakeFiles/zc.dir/rule
 .PHONY : zc/src/CMakeFiles/zc.dir/rule
 
 # Convenience name for target.
@@ -187,7 +187,7 @@ zc: zc/src/CMakeFiles/zc.dir/rule
 
 # fast build rule for target.
 zc/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/build
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/build
 .PHONY : zc/fast
 
 DynamicByteArray.o: DynamicByteArray.c.o
@@ -196,7 +196,7 @@ DynamicByteArray.o: DynamicByteArray.c.o
 
 # target to build an object file
 DynamicByteArray.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicByteArray.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicByteArray.c.o
 .PHONY : DynamicByteArray.c.o
 
 DynamicByteArray.i: DynamicByteArray.c.i
@@ -205,7 +205,7 @@ DynamicByteArray.i: DynamicByteArray.c.i
 
 # target to preprocess a source file
 DynamicByteArray.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicByteArray.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicByteArray.c.i
 .PHONY : DynamicByteArray.c.i
 
 DynamicByteArray.s: DynamicByteArray.c.s
@@ -214,7 +214,7 @@ DynamicByteArray.s: DynamicByteArray.c.s
 
 # target to generate assembly for a file
 DynamicByteArray.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicByteArray.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicByteArray.c.s
 .PHONY : DynamicByteArray.c.s
 
 DynamicDoubleArray.o: DynamicDoubleArray.c.o
@@ -223,7 +223,7 @@ DynamicDoubleArray.o: DynamicDoubleArray.c.o
 
 # target to build an object file
 DynamicDoubleArray.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicDoubleArray.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicDoubleArray.c.o
 .PHONY : DynamicDoubleArray.c.o
 
 DynamicDoubleArray.i: DynamicDoubleArray.c.i
@@ -232,7 +232,7 @@ DynamicDoubleArray.i: DynamicDoubleArray.c.i
 
 # target to preprocess a source file
 DynamicDoubleArray.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicDoubleArray.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicDoubleArray.c.i
 .PHONY : DynamicDoubleArray.c.i
 
 DynamicDoubleArray.s: DynamicDoubleArray.c.s
@@ -241,7 +241,7 @@ DynamicDoubleArray.s: DynamicDoubleArray.c.s
 
 # target to generate assembly for a file
 DynamicDoubleArray.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicDoubleArray.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicDoubleArray.c.s
 .PHONY : DynamicDoubleArray.c.s
 
 DynamicFloatArray.o: DynamicFloatArray.c.o
@@ -250,7 +250,7 @@ DynamicFloatArray.o: DynamicFloatArray.c.o
 
 # target to build an object file
 DynamicFloatArray.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicFloatArray.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicFloatArray.c.o
 .PHONY : DynamicFloatArray.c.o
 
 DynamicFloatArray.i: DynamicFloatArray.c.i
@@ -259,7 +259,7 @@ DynamicFloatArray.i: DynamicFloatArray.c.i
 
 # target to preprocess a source file
 DynamicFloatArray.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicFloatArray.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicFloatArray.c.i
 .PHONY : DynamicFloatArray.c.i
 
 DynamicFloatArray.s: DynamicFloatArray.c.s
@@ -268,7 +268,7 @@ DynamicFloatArray.s: DynamicFloatArray.c.s
 
 # target to generate assembly for a file
 DynamicFloatArray.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicFloatArray.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicFloatArray.c.s
 .PHONY : DynamicFloatArray.c.s
 
 DynamicIntArray.o: DynamicIntArray.c.o
@@ -277,7 +277,7 @@ DynamicIntArray.o: DynamicIntArray.c.o
 
 # target to build an object file
 DynamicIntArray.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicIntArray.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicIntArray.c.o
 .PHONY : DynamicIntArray.c.o
 
 DynamicIntArray.i: DynamicIntArray.c.i
@@ -286,7 +286,7 @@ DynamicIntArray.i: DynamicIntArray.c.i
 
 # target to preprocess a source file
 DynamicIntArray.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicIntArray.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicIntArray.c.i
 .PHONY : DynamicIntArray.c.i
 
 DynamicIntArray.s: DynamicIntArray.c.s
@@ -295,7 +295,7 @@ DynamicIntArray.s: DynamicIntArray.c.s
 
 # target to generate assembly for a file
 DynamicIntArray.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicIntArray.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/DynamicIntArray.c.s
 .PHONY : DynamicIntArray.c.s
 
 ZC_ByteToolkit.o: ZC_ByteToolkit.c.o
@@ -304,7 +304,7 @@ ZC_ByteToolkit.o: ZC_ByteToolkit.c.o
 
 # target to build an object file
 ZC_ByteToolkit.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ByteToolkit.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ByteToolkit.c.o
 .PHONY : ZC_ByteToolkit.c.o
 
 ZC_ByteToolkit.i: ZC_ByteToolkit.c.i
@@ -313,7 +313,7 @@ ZC_ByteToolkit.i: ZC_ByteToolkit.c.i
 
 # target to preprocess a source file
 ZC_ByteToolkit.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ByteToolkit.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ByteToolkit.c.i
 .PHONY : ZC_ByteToolkit.c.i
 
 ZC_ByteToolkit.s: ZC_ByteToolkit.c.s
@@ -322,7 +322,7 @@ ZC_ByteToolkit.s: ZC_ByteToolkit.c.s
 
 # target to generate assembly for a file
 ZC_ByteToolkit.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ByteToolkit.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ByteToolkit.c.s
 .PHONY : ZC_ByteToolkit.c.s
 
 ZC_CompareData.o: ZC_CompareData.c.o
@@ -331,7 +331,7 @@ ZC_CompareData.o: ZC_CompareData.c.o
 
 # target to build an object file
 ZC_CompareData.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData.c.o
 .PHONY : ZC_CompareData.c.o
 
 ZC_CompareData.i: ZC_CompareData.c.i
@@ -340,7 +340,7 @@ ZC_CompareData.i: ZC_CompareData.c.i
 
 # target to preprocess a source file
 ZC_CompareData.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData.c.i
 .PHONY : ZC_CompareData.c.i
 
 ZC_CompareData.s: ZC_CompareData.c.s
@@ -349,7 +349,7 @@ ZC_CompareData.s: ZC_CompareData.c.s
 
 # target to generate assembly for a file
 ZC_CompareData.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData.c.s
 .PHONY : ZC_CompareData.c.s
 
 ZC_CompareData_double.o: ZC_CompareData_double.cpp.o
@@ -358,7 +358,7 @@ ZC_CompareData_double.o: ZC_CompareData_double.cpp.o
 
 # target to build an object file
 ZC_CompareData_double.cpp.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o
 .PHONY : ZC_CompareData_double.cpp.o
 
 ZC_CompareData_double.i: ZC_CompareData_double.cpp.i
@@ -367,7 +367,7 @@ ZC_CompareData_double.i: ZC_CompareData_double.cpp.i
 
 # target to preprocess a source file
 ZC_CompareData_double.cpp.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.i
 .PHONY : ZC_CompareData_double.cpp.i
 
 ZC_CompareData_double.s: ZC_CompareData_double.cpp.s
@@ -376,7 +376,7 @@ ZC_CompareData_double.s: ZC_CompareData_double.cpp.s
 
 # target to generate assembly for a file
 ZC_CompareData_double.cpp.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.s
 .PHONY : ZC_CompareData_double.cpp.s
 
 ZC_CompareData_float.o: ZC_CompareData_float.cpp.o
@@ -385,7 +385,7 @@ ZC_CompareData_float.o: ZC_CompareData_float.cpp.o
 
 # target to build an object file
 ZC_CompareData_float.cpp.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o
 .PHONY : ZC_CompareData_float.cpp.o
 
 ZC_CompareData_float.i: ZC_CompareData_float.cpp.i
@@ -394,7 +394,7 @@ ZC_CompareData_float.i: ZC_CompareData_float.cpp.i
 
 # target to preprocess a source file
 ZC_CompareData_float.cpp.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.i
 .PHONY : ZC_CompareData_float.cpp.i
 
 ZC_CompareData_float.s: ZC_CompareData_float.cpp.s
@@ -403,7 +403,7 @@ ZC_CompareData_float.s: ZC_CompareData_float.cpp.s
 
 # target to generate assembly for a file
 ZC_CompareData_float.cpp.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.s
 .PHONY : ZC_CompareData_float.cpp.s
 
 ZC_DataProperty.o: ZC_DataProperty.c.o
@@ -412,7 +412,7 @@ ZC_DataProperty.o: ZC_DataProperty.c.o
 
 # target to build an object file
 ZC_DataProperty.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty.c.o
 .PHONY : ZC_DataProperty.c.o
 
 ZC_DataProperty.i: ZC_DataProperty.c.i
@@ -421,7 +421,7 @@ ZC_DataProperty.i: ZC_DataProperty.c.i
 
 # target to preprocess a source file
 ZC_DataProperty.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty.c.i
 .PHONY : ZC_DataProperty.c.i
 
 ZC_DataProperty.s: ZC_DataProperty.c.s
@@ -430,7 +430,7 @@ ZC_DataProperty.s: ZC_DataProperty.c.s
 
 # target to generate assembly for a file
 ZC_DataProperty.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty.c.s
 .PHONY : ZC_DataProperty.c.s
 
 ZC_DataProperty_double.o: ZC_DataProperty_double.c.o
@@ -439,7 +439,7 @@ ZC_DataProperty_double.o: ZC_DataProperty_double.c.o
 
 # target to build an object file
 ZC_DataProperty_double.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_double.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_double.c.o
 .PHONY : ZC_DataProperty_double.c.o
 
 ZC_DataProperty_double.i: ZC_DataProperty_double.c.i
@@ -448,7 +448,7 @@ ZC_DataProperty_double.i: ZC_DataProperty_double.c.i
 
 # target to preprocess a source file
 ZC_DataProperty_double.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_double.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_double.c.i
 .PHONY : ZC_DataProperty_double.c.i
 
 ZC_DataProperty_double.s: ZC_DataProperty_double.c.s
@@ -457,7 +457,7 @@ ZC_DataProperty_double.s: ZC_DataProperty_double.c.s
 
 # target to generate assembly for a file
 ZC_DataProperty_double.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_double.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_double.c.s
 .PHONY : ZC_DataProperty_double.c.s
 
 ZC_DataProperty_float.o: ZC_DataProperty_float.c.o
@@ -466,7 +466,7 @@ ZC_DataProperty_float.o: ZC_DataProperty_float.c.o
 
 # target to build an object file
 ZC_DataProperty_float.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_float.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_float.c.o
 .PHONY : ZC_DataProperty_float.c.o
 
 ZC_DataProperty_float.i: ZC_DataProperty_float.c.i
@@ -475,7 +475,7 @@ ZC_DataProperty_float.i: ZC_DataProperty_float.c.i
 
 # target to preprocess a source file
 ZC_DataProperty_float.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_float.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_float.c.i
 .PHONY : ZC_DataProperty_float.c.i
 
 ZC_DataProperty_float.s: ZC_DataProperty_float.c.s
@@ -484,7 +484,7 @@ ZC_DataProperty_float.s: ZC_DataProperty_float.c.s
 
 # target to generate assembly for a file
 ZC_DataProperty_float.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_float.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataProperty_float.c.s
 .PHONY : ZC_DataProperty_float.c.s
 
 ZC_DataSetHandler.o: ZC_DataSetHandler.c.o
@@ -493,7 +493,7 @@ ZC_DataSetHandler.o: ZC_DataSetHandler.c.o
 
 # target to build an object file
 ZC_DataSetHandler.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataSetHandler.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataSetHandler.c.o
 .PHONY : ZC_DataSetHandler.c.o
 
 ZC_DataSetHandler.i: ZC_DataSetHandler.c.i
@@ -502,7 +502,7 @@ ZC_DataSetHandler.i: ZC_DataSetHandler.c.i
 
 # target to preprocess a source file
 ZC_DataSetHandler.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataSetHandler.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataSetHandler.c.i
 .PHONY : ZC_DataSetHandler.c.i
 
 ZC_DataSetHandler.s: ZC_DataSetHandler.c.s
@@ -511,7 +511,7 @@ ZC_DataSetHandler.s: ZC_DataSetHandler.c.s
 
 # target to generate assembly for a file
 ZC_DataSetHandler.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataSetHandler.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_DataSetHandler.c.s
 .PHONY : ZC_DataSetHandler.c.s
 
 ZC_Hashtable.o: ZC_Hashtable.c.o
@@ -520,7 +520,7 @@ ZC_Hashtable.o: ZC_Hashtable.c.o
 
 # target to build an object file
 ZC_Hashtable.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_Hashtable.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_Hashtable.c.o
 .PHONY : ZC_Hashtable.c.o
 
 ZC_Hashtable.i: ZC_Hashtable.c.i
@@ -529,7 +529,7 @@ ZC_Hashtable.i: ZC_Hashtable.c.i
 
 # target to preprocess a source file
 ZC_Hashtable.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_Hashtable.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_Hashtable.c.i
 .PHONY : ZC_Hashtable.c.i
 
 ZC_Hashtable.s: ZC_Hashtable.c.s
@@ -538,7 +538,7 @@ ZC_Hashtable.s: ZC_Hashtable.c.s
 
 # target to generate assembly for a file
 ZC_Hashtable.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_Hashtable.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_Hashtable.c.s
 .PHONY : ZC_Hashtable.c.s
 
 ZC_ReportGenerator.o: ZC_ReportGenerator.c.o
@@ -547,7 +547,7 @@ ZC_ReportGenerator.o: ZC_ReportGenerator.c.o
 
 # target to build an object file
 ZC_ReportGenerator.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ReportGenerator.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ReportGenerator.c.o
 .PHONY : ZC_ReportGenerator.c.o
 
 ZC_ReportGenerator.i: ZC_ReportGenerator.c.i
@@ -556,7 +556,7 @@ ZC_ReportGenerator.i: ZC_ReportGenerator.c.i
 
 # target to preprocess a source file
 ZC_ReportGenerator.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ReportGenerator.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ReportGenerator.c.i
 .PHONY : ZC_ReportGenerator.c.i
 
 ZC_ReportGenerator.s: ZC_ReportGenerator.c.s
@@ -565,7 +565,7 @@ ZC_ReportGenerator.s: ZC_ReportGenerator.c.s
 
 # target to generate assembly for a file
 ZC_ReportGenerator.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ReportGenerator.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ReportGenerator.c.s
 .PHONY : ZC_ReportGenerator.c.s
 
 ZC_conf.o: ZC_conf.c.o
@@ -574,7 +574,7 @@ ZC_conf.o: ZC_conf.c.o
 
 # target to build an object file
 ZC_conf.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_conf.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_conf.c.o
 .PHONY : ZC_conf.c.o
 
 ZC_conf.i: ZC_conf.c.i
@@ -583,7 +583,7 @@ ZC_conf.i: ZC_conf.c.i
 
 # target to preprocess a source file
 ZC_conf.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_conf.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_conf.c.i
 .PHONY : ZC_conf.c.i
 
 ZC_conf.s: ZC_conf.c.s
@@ -592,7 +592,7 @@ ZC_conf.s: ZC_conf.c.s
 
 # target to generate assembly for a file
 ZC_conf.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_conf.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_conf.c.s
 .PHONY : ZC_conf.c.s
 
 ZC_gnuplot.o: ZC_gnuplot.c.o
@@ -601,7 +601,7 @@ ZC_gnuplot.o: ZC_gnuplot.c.o
 
 # target to build an object file
 ZC_gnuplot.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_gnuplot.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_gnuplot.c.o
 .PHONY : ZC_gnuplot.c.o
 
 ZC_gnuplot.i: ZC_gnuplot.c.i
@@ -610,7 +610,7 @@ ZC_gnuplot.i: ZC_gnuplot.c.i
 
 # target to preprocess a source file
 ZC_gnuplot.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_gnuplot.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_gnuplot.c.i
 .PHONY : ZC_gnuplot.c.i
 
 ZC_gnuplot.s: ZC_gnuplot.c.s
@@ -619,7 +619,7 @@ ZC_gnuplot.s: ZC_gnuplot.c.s
 
 # target to generate assembly for a file
 ZC_gnuplot.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_gnuplot.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_gnuplot.c.s
 .PHONY : ZC_gnuplot.c.s
 
 ZC_latex.o: ZC_latex.c.o
@@ -628,7 +628,7 @@ ZC_latex.o: ZC_latex.c.o
 
 # target to build an object file
 ZC_latex.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_latex.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_latex.c.o
 .PHONY : ZC_latex.c.o
 
 ZC_latex.i: ZC_latex.c.i
@@ -637,7 +637,7 @@ ZC_latex.i: ZC_latex.c.i
 
 # target to preprocess a source file
 ZC_latex.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_latex.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_latex.c.i
 .PHONY : ZC_latex.c.i
 
 ZC_latex.s: ZC_latex.c.s
@@ -646,7 +646,7 @@ ZC_latex.s: ZC_latex.c.s
 
 # target to generate assembly for a file
 ZC_latex.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_latex.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_latex.c.s
 .PHONY : ZC_latex.c.s
 
 ZC_quicksort.o: ZC_quicksort.c.o
@@ -655,7 +655,7 @@ ZC_quicksort.o: ZC_quicksort.c.o
 
 # target to build an object file
 ZC_quicksort.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_quicksort.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_quicksort.c.o
 .PHONY : ZC_quicksort.c.o
 
 ZC_quicksort.i: ZC_quicksort.c.i
@@ -664,7 +664,7 @@ ZC_quicksort.i: ZC_quicksort.c.i
 
 # target to preprocess a source file
 ZC_quicksort.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_quicksort.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_quicksort.c.i
 .PHONY : ZC_quicksort.c.i
 
 ZC_quicksort.s: ZC_quicksort.c.s
@@ -673,7 +673,7 @@ ZC_quicksort.s: ZC_quicksort.c.s
 
 # target to generate assembly for a file
 ZC_quicksort.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_quicksort.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_quicksort.c.s
 .PHONY : ZC_quicksort.c.s
 
 ZC_rw.o: ZC_rw.c.o
@@ -682,7 +682,7 @@ ZC_rw.o: ZC_rw.c.o
 
 # target to build an object file
 ZC_rw.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_rw.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_rw.c.o
 .PHONY : ZC_rw.c.o
 
 ZC_rw.i: ZC_rw.c.i
@@ -691,7 +691,7 @@ ZC_rw.i: ZC_rw.c.i
 
 # target to preprocess a source file
 ZC_rw.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_rw.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_rw.c.i
 .PHONY : ZC_rw.c.i
 
 ZC_rw.s: ZC_rw.c.s
@@ -700,7 +700,7 @@ ZC_rw.s: ZC_rw.c.s
 
 # target to generate assembly for a file
 ZC_rw.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_rw.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_rw.c.s
 .PHONY : ZC_rw.c.s
 
 ZC_ssim.o: ZC_ssim.c.o
@@ -709,7 +709,7 @@ ZC_ssim.o: ZC_ssim.c.o
 
 # target to build an object file
 ZC_ssim.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ssim.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ssim.c.o
 .PHONY : ZC_ssim.c.o
 
 ZC_ssim.i: ZC_ssim.c.i
@@ -718,7 +718,7 @@ ZC_ssim.i: ZC_ssim.c.i
 
 # target to preprocess a source file
 ZC_ssim.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ssim.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ssim.c.i
 .PHONY : ZC_ssim.c.i
 
 ZC_ssim.s: ZC_ssim.c.s
@@ -727,7 +727,7 @@ ZC_ssim.s: ZC_ssim.c.s
 
 # target to generate assembly for a file
 ZC_ssim.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ssim.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_ssim.c.s
 .PHONY : ZC_ssim.c.s
 
 ZC_util.o: ZC_util.c.o
@@ -736,7 +736,7 @@ ZC_util.o: ZC_util.c.o
 
 # target to build an object file
 ZC_util.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_util.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_util.c.o
 .PHONY : ZC_util.c.o
 
 ZC_util.i: ZC_util.c.i
@@ -745,7 +745,7 @@ ZC_util.i: ZC_util.c.i
 
 # target to preprocess a source file
 ZC_util.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_util.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_util.c.i
 .PHONY : ZC_util.c.i
 
 ZC_util.s: ZC_util.c.s
@@ -754,7 +754,7 @@ ZC_util.s: ZC_util.c.s
 
 # target to generate assembly for a file
 ZC_util.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_util.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/ZC_util.c.s
 .PHONY : ZC_util.c.s
 
 cuZC_entry.o: cuZC_entry.cu.o
@@ -763,7 +763,7 @@ cuZC_entry.o: cuZC_entry.cu.o
 
 # target to build an object file
 cuZC_entry.cu.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o
 .PHONY : cuZC_entry.cu.o
 
 cuZC_entry.i: cuZC_entry.cu.i
@@ -772,7 +772,7 @@ cuZC_entry.i: cuZC_entry.cu.i
 
 # target to preprocess a source file
 cuZC_entry.cu.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.i
 .PHONY : cuZC_entry.cu.i
 
 cuZC_entry.s: cuZC_entry.cu.s
@@ -781,7 +781,7 @@ cuZC_entry.s: cuZC_entry.cu.s
 
 # target to generate assembly for a file
 cuZC_entry.cu.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.s
 .PHONY : cuZC_entry.cu.s
 
 cuZC_ssim.o: cuZC_ssim.cu.o
@@ -790,7 +790,7 @@ cuZC_ssim.o: cuZC_ssim.cu.o
 
 # target to build an object file
 cuZC_ssim.cu.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o
 .PHONY : cuZC_ssim.cu.o
 
 cuZC_ssim.i: cuZC_ssim.cu.i
@@ -799,7 +799,7 @@ cuZC_ssim.i: cuZC_ssim.cu.i
 
 # target to preprocess a source file
 cuZC_ssim.cu.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.i
 .PHONY : cuZC_ssim.cu.i
 
 cuZC_ssim.s: cuZC_ssim.cu.s
@@ -808,8 +808,62 @@ cuZC_ssim.s: cuZC_ssim.cu.s
 
 # target to generate assembly for a file
 cuZC_ssim.cu.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.s
 .PHONY : cuZC_ssim.cu.s
+
+cuZC_typeOne.o: cuZC_typeOne.cu.o
+
+.PHONY : cuZC_typeOne.o
+
+# target to build an object file
+cuZC_typeOne.cu.o:
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o
+.PHONY : cuZC_typeOne.cu.o
+
+cuZC_typeOne.i: cuZC_typeOne.cu.i
+
+.PHONY : cuZC_typeOne.i
+
+# target to preprocess a source file
+cuZC_typeOne.cu.i:
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.i
+.PHONY : cuZC_typeOne.cu.i
+
+cuZC_typeOne.s: cuZC_typeOne.cu.s
+
+.PHONY : cuZC_typeOne.s
+
+# target to generate assembly for a file
+cuZC_typeOne.cu.s:
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.s
+.PHONY : cuZC_typeOne.cu.s
+
+cuZC_typeTwo.o: cuZC_typeTwo.cu.o
+
+.PHONY : cuZC_typeTwo.o
+
+# target to build an object file
+cuZC_typeTwo.cu.o:
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o
+.PHONY : cuZC_typeTwo.cu.o
+
+cuZC_typeTwo.i: cuZC_typeTwo.cu.i
+
+.PHONY : cuZC_typeTwo.i
+
+# target to preprocess a source file
+cuZC_typeTwo.cu.i:
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.i
+.PHONY : cuZC_typeTwo.cu.i
+
+cuZC_typeTwo.s: cuZC_typeTwo.cu.s
+
+.PHONY : cuZC_typeTwo.s
+
+# target to generate assembly for a file
+cuZC_typeTwo.cu.s:
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.s
+.PHONY : cuZC_typeTwo.cu.s
 
 dictionary.o: dictionary.c.o
 
@@ -817,7 +871,7 @@ dictionary.o: dictionary.c.o
 
 # target to build an object file
 dictionary.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/dictionary.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/dictionary.c.o
 .PHONY : dictionary.c.o
 
 dictionary.i: dictionary.c.i
@@ -826,7 +880,7 @@ dictionary.i: dictionary.c.i
 
 # target to preprocess a source file
 dictionary.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/dictionary.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/dictionary.c.i
 .PHONY : dictionary.c.i
 
 dictionary.s: dictionary.c.s
@@ -835,7 +889,7 @@ dictionary.s: dictionary.c.s
 
 # target to generate assembly for a file
 dictionary.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/dictionary.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/dictionary.c.s
 .PHONY : dictionary.c.s
 
 iniparser.o: iniparser.c.o
@@ -844,7 +898,7 @@ iniparser.o: iniparser.c.o
 
 # target to build an object file
 iniparser.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/iniparser.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/iniparser.c.o
 .PHONY : iniparser.c.o
 
 iniparser.i: iniparser.c.i
@@ -853,7 +907,7 @@ iniparser.i: iniparser.c.i
 
 # target to preprocess a source file
 iniparser.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/iniparser.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/iniparser.c.i
 .PHONY : iniparser.c.i
 
 iniparser.s: iniparser.c.s
@@ -862,7 +916,7 @@ iniparser.s: iniparser.c.s
 
 # target to generate assembly for a file
 iniparser.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/iniparser.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/iniparser.c.s
 .PHONY : iniparser.c.s
 
 timingGPU.o: timingGPU.cu.o
@@ -871,7 +925,7 @@ timingGPU.o: timingGPU.cu.o
 
 # target to build an object file
 timingGPU.cu.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/timingGPU.cu.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/timingGPU.cu.o
 .PHONY : timingGPU.cu.o
 
 timingGPU.i: timingGPU.cu.i
@@ -880,7 +934,7 @@ timingGPU.i: timingGPU.cu.i
 
 # target to preprocess a source file
 timingGPU.cu.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/timingGPU.cu.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/timingGPU.cu.i
 .PHONY : timingGPU.cu.i
 
 timingGPU.s: timingGPU.cu.s
@@ -889,7 +943,7 @@ timingGPU.s: timingGPU.cu.s
 
 # target to generate assembly for a file
 timingGPU.cu.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/timingGPU.cu.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/timingGPU.cu.s
 .PHONY : timingGPU.cu.s
 
 zc.o: zc.c.o
@@ -898,7 +952,7 @@ zc.o: zc.c.o
 
 # target to build an object file
 zc.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc.c.o
 .PHONY : zc.c.o
 
 zc.i: zc.c.i
@@ -907,7 +961,7 @@ zc.i: zc.c.i
 
 # target to preprocess a source file
 zc.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc.c.i
 .PHONY : zc.c.i
 
 zc.s: zc.c.s
@@ -916,7 +970,7 @@ zc.s: zc.c.s
 
 # target to generate assembly for a file
 zc.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc.c.s
 .PHONY : zc.c.s
 
 zc_derivativeMetrics.o: zc_derivativeMetrics.cpp.o
@@ -925,7 +979,7 @@ zc_derivativeMetrics.o: zc_derivativeMetrics.cpp.o
 
 # target to build an object file
 zc_derivativeMetrics.cpp.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o
 .PHONY : zc_derivativeMetrics.cpp.o
 
 zc_derivativeMetrics.i: zc_derivativeMetrics.cpp.i
@@ -934,7 +988,7 @@ zc_derivativeMetrics.i: zc_derivativeMetrics.cpp.i
 
 # target to preprocess a source file
 zc_derivativeMetrics.cpp.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.i
 .PHONY : zc_derivativeMetrics.cpp.i
 
 zc_derivativeMetrics.s: zc_derivativeMetrics.cpp.s
@@ -943,7 +997,7 @@ zc_derivativeMetrics.s: zc_derivativeMetrics.cpp.s
 
 # target to generate assembly for a file
 zc_derivativeMetrics.cpp.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.s
 .PHONY : zc_derivativeMetrics.cpp.s
 
 # Help Target
@@ -1028,6 +1082,12 @@ help:
 	@echo "... cuZC_ssim.o"
 	@echo "... cuZC_ssim.i"
 	@echo "... cuZC_ssim.s"
+	@echo "... cuZC_typeOne.o"
+	@echo "... cuZC_typeOne.i"
+	@echo "... cuZC_typeOne.s"
+	@echo "... cuZC_typeTwo.o"
+	@echo "... cuZC_typeTwo.i"
+	@echo "... cuZC_typeTwo.s"
 	@echo "... dictionary.o"
 	@echo "... dictionary.i"
 	@echo "... dictionary.s"
@@ -1054,6 +1114,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /homes/xyu/cuZC/Z-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -67,10 +67,10 @@ RM = /lambda_stor/homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /homes/xyu/cuZC/Z-checker
+CMAKE_SOURCE_DIR = /homes/xyu/cuZ-checker/cuZ-checker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /homes/xyu/cuZC/Z-checker/build
+CMAKE_BINARY_DIR = /homes/xyu/cuZ-checker/cuZ-checker/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -145,9 +145,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles /homes/xyu/cuZC/Z-checker/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles /homes/xyu/cuZ-checker/cuZ-checker/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

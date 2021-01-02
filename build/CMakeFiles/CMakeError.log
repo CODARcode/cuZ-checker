@@ -1,25 +1,25 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /homes/xyu/cuZC/Z-checker/build/CMakeFiles/CMakeTmp
+Change Dir: /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_4b9e8/fast && /usr/bin/make  -f CMakeFiles/cmTC_4b9e8.dir/build.make CMakeFiles/cmTC_4b9e8.dir/build
-make[1]: Entering directory '/lambda_stor/homes/xyu/cuZC/Z-checker/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4b9e8.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4b9e8.dir/src.c.o -c /homes/xyu/cuZC/Z-checker/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_4b9e8
-/lambda_stor/homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b9e8.dir/link.txt --verbose=1
-/usr/bin/cc -rdynamic CMakeFiles/cmTC_4b9e8.dir/src.c.o -o cmTC_4b9e8 
-CMakeFiles/cmTC_4b9e8.dir/src.c.o: In function `main':
+Run Build Command(s):/usr/bin/make cmTC_7bff3/fast && /usr/bin/make  -f CMakeFiles/cmTC_7bff3.dir/build.make CMakeFiles/cmTC_7bff3.dir/build
+make[1]: Entering directory '/lambda_stor/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7bff3.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_7bff3.dir/src.c.o -c /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7bff3
+/lambda_stor/homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7bff3.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_7bff3.dir/src.c.o -o cmTC_7bff3 
+CMakeFiles/cmTC_7bff3.dir/src.c.o: In function `main':
 src.c:(.text+0x3e): undefined reference to `pthread_create'
 src.c:(.text+0x4a): undefined reference to `pthread_detach'
 src.c:(.text+0x56): undefined reference to `pthread_cancel'
 src.c:(.text+0x67): undefined reference to `pthread_join'
 src.c:(.text+0x7b): undefined reference to `pthread_atfork'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_4b9e8.dir/build.make:105: recipe for target 'cmTC_4b9e8' failed
-make[1]: *** [cmTC_4b9e8] Error 1
-make[1]: Leaving directory '/lambda_stor/homes/xyu/cuZC/Z-checker/build/CMakeFiles/CMakeTmp'
-Makefile:140: recipe for target 'cmTC_4b9e8/fast' failed
-make: *** [cmTC_4b9e8/fast] Error 2
+CMakeFiles/cmTC_7bff3.dir/build.make:105: recipe for target 'cmTC_7bff3' failed
+make[1]: *** [cmTC_7bff3] Error 1
+make[1]: Leaving directory '/lambda_stor/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_7bff3/fast' failed
+make: *** [cmTC_7bff3/fast] Error 2
 
 
 Source file was:
@@ -44,22 +44,22 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /homes/xyu/cuZC/Z-checker/build/CMakeFiles/CMakeTmp
+Change Dir: /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_ad1cd/fast && /usr/bin/make  -f CMakeFiles/cmTC_ad1cd.dir/build.make CMakeFiles/cmTC_ad1cd.dir/build
-make[1]: Entering directory '/lambda_stor/homes/xyu/cuZC/Z-checker/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ad1cd.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_ad1cd.dir/CheckFunctionExists.c.o -c /homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/share/cmake-3.19/Modules/CheckFunctionExists.c
-Linking C executable cmTC_ad1cd
-/lambda_stor/homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad1cd.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_ad1cd.dir/CheckFunctionExists.c.o -o cmTC_ad1cd  -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_3b66a/fast && /usr/bin/make  -f CMakeFiles/cmTC_3b66a.dir/build.make CMakeFiles/cmTC_3b66a.dir/build
+make[1]: Entering directory '/lambda_stor/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b66a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_3b66a.dir/CheckFunctionExists.c.o -c /homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3b66a
+/lambda_stor/homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b66a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_3b66a.dir/CheckFunctionExists.c.o -o cmTC_3b66a  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_ad1cd.dir/build.make:105: recipe for target 'cmTC_ad1cd' failed
-make[1]: *** [cmTC_ad1cd] Error 1
-make[1]: Leaving directory '/lambda_stor/homes/xyu/cuZC/Z-checker/build/CMakeFiles/CMakeTmp'
-Makefile:140: recipe for target 'cmTC_ad1cd/fast' failed
-make: *** [cmTC_ad1cd/fast] Error 2
+CMakeFiles/cmTC_3b66a.dir/build.make:105: recipe for target 'cmTC_3b66a' failed
+make[1]: *** [cmTC_3b66a] Error 1
+make[1]: Leaving directory '/lambda_stor/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_3b66a/fast' failed
+make: *** [cmTC_3b66a/fast] Error 2
 
 
 

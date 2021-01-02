@@ -80,3 +80,70 @@ int cu_SSIM(float *data1, float *data2, size_t r3, size_t r2, size_t r1, int ssi
 
     return 0;
 }
+
+double *cu_typeOne(float *ddata1, float *ddata2, double *ddiff, double *absErrPDF, double *results, size_t r3, size_t r2, size_t r1, size_t ne){
+
+    //float *ddata1, *ddata2;
+    double *dabsErrPDF, *dresults;
+    //for (int i=r1*r2*6+r2*6;i<r1*r2*6+r2*6+7;i++){
+    ////for (int i=0;i<r1*r2*r3;i++){
+    //    printf("data%i=%e, %e\n",i, data1[i], data2[i]);
+    //    printf("data%i=%e, %e\n",i, data1[i], data2[i]);
+
+    //}
+
+    const int dsize = ne * sizeof(double);
+    const int rsize = r3 * 10 * sizeof(double);
+
+    cudaMalloc((void**)&dabsErrPDF, dsize); 
+    cudaMalloc((void**)&dresults, rsize); 
+    cudaMemcpy(dresults, results, rsize, cudaMemcpyHostToDevice); 
+
+    timer_GPU.StartCounter();
+    dim3 dimBlock(32, 8);
+    dim3 dimGrid(r3, 1);
+    type_one<<<dimGrid, dimBlock>>>(ddata1, ddata2, ddiff, dresults, r3, r2, r1, ne);
+
+    dim3 dimBlock2(32, 10);
+    gridReduction<<<1, dimBlock2>>>(dresults, r3);
+
+    cudaMemcpy(results, dresults, rsize, cudaMemcpyDeviceToHost); 
+    double x=0;
+    printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
+    //for (int i=0; i<r3; i++){
+    //    x += results[i];
+    //    printf("results%i=%e\n",i,x);
+
+    //}
+
+    cudaFree(dabsErrPDF);
+    cudaFree(dresults);
+
+    return results;
+}
+
+float *cu_typeTwo(float *ddata, float *der, size_t r3, size_t r2, size_t r1, size_t order){
+
+    float *dder;
+    const int dsize = (r3-order*2) * (r2-order*2) * (r1-order*2) * sizeof(float);
+
+    cudaMalloc((void**)&dder, dsize); 
+    cudaMemcpy(dder, der, dsize, cudaMemcpyHostToDevice); 
+
+    int blksize = (r3-order*2)/(16-order*2)+((r3-order*2)%(16-order*2)?1:0);
+    timer_GPU.StartCounter();
+    dim3 dimBlock(16, 16);
+    dim3 dimGrid(blksize, 1);
+    type_two<<<dimGrid, dimBlock>>>(ddata, dder, r3, r2, r1, order);
+
+    cudaMemcpy(der, dder, dsize, cudaMemcpyDeviceToHost); 
+
+    printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
+    //for (int i=0;i<(r3-4)*(r2-4)*(r1-4);i++){
+    //    if (der[i]!=0.0) printf("ddata%i=%e\n",i,der[i]);
+    //}
+
+    cudaFree(dder);
+
+    return der;
+}

@@ -67,10 +67,10 @@ RM = /lambda_stor/homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /homes/xyu/cuZC/Z-checker
+CMAKE_SOURCE_DIR = /homes/xyu/cuZ-checker/cuZ-checker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /homes/xyu/cuZC/Z-checker/build
+CMAKE_BINARY_DIR = /homes/xyu/cuZ-checker/cuZ-checker/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -145,14 +145,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /homes/xyu/cuZC/Z-checker/build && $(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles /homes/xyu/cuZC/Z-checker/build/zc//CMakeFiles/progress.marks
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles /homes/xyu/cuZ-checker/cuZ-checker/build/zc//CMakeFiles/progress.marks
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/clean
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/clean
 .PHONY : clean
 
 # The main clean target
@@ -162,17 +162,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/preinstall
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/preinstall
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /homes/xyu/cuZC/Z-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -198,6 +198,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /homes/xyu/cuZC/Z-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

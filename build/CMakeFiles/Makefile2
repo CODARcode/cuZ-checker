@@ -63,10 +63,10 @@ RM = /lambda_stor/homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /homes/xyu/cuZC/Z-checker
+CMAKE_SOURCE_DIR = /homes/xyu/cuZ-checker/cuZ-checker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /homes/xyu/cuZC/Z-checker/build
+CMAKE_BINARY_DIR = /homes/xyu/cuZ-checker/cuZ-checker/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -187,14 +187,14 @@ zc/src/clean: zc/src/CMakeFiles/zc.dir/clean
 zc/src/CMakeFiles/zc.dir/all:
 	$(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/depend
 	$(MAKE) $(MAKESILENT) -f zc/src/CMakeFiles/zc.dir/build.make zc/src/CMakeFiles/zc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZC/Z-checker/build/CMakeFiles --progress-num=20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 "Built target zc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles --progress-num=20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51 "Built target zc"
 .PHONY : zc/src/CMakeFiles/zc.dir/all
 
 # Build rule for subdir invocation for target.
 zc/src/CMakeFiles/zc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 32
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zc/src/CMakeFiles/zc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : zc/src/CMakeFiles/zc.dir/rule
 
 # Convenience name for target.
@@ -214,14 +214,14 @@ zc/src/CMakeFiles/zc.dir/clean:
 examples/CMakeFiles/compareDataSets.dir/all: zc/src/CMakeFiles/zc.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/compareDataSets.dir/build.make examples/CMakeFiles/compareDataSets.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/compareDataSets.dir/build.make examples/CMakeFiles/compareDataSets.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZC/Z-checker/build/CMakeFiles --progress-num=5,6,7 "Built target compareDataSets"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles --progress-num=5,6,7 "Built target compareDataSets"
 .PHONY : examples/CMakeFiles/compareDataSets.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/compareDataSets.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 33
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 35
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/compareDataSets.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/compareDataSets.dir/rule
 
 # Convenience name for target.
@@ -241,14 +241,14 @@ examples/CMakeFiles/compareDataSets.dir/clean:
 examples/CMakeFiles/analyzeDataProperty_multivars.dir/all: zc/src/CMakeFiles/zc.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty_multivars.dir/build.make examples/CMakeFiles/analyzeDataProperty_multivars.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty_multivars.dir/build.make examples/CMakeFiles/analyzeDataProperty_multivars.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZC/Z-checker/build/CMakeFiles --progress-num=3,4 "Built target analyzeDataProperty_multivars"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles --progress-num=3,4 "Built target analyzeDataProperty_multivars"
 .PHONY : examples/CMakeFiles/analyzeDataProperty_multivars.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/analyzeDataProperty_multivars.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/analyzeDataProperty_multivars.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/analyzeDataProperty_multivars.dir/rule
 
 # Convenience name for target.
@@ -268,14 +268,14 @@ examples/CMakeFiles/analyzeDataProperty_multivars.dir/clean:
 examples/CMakeFiles/analyzeDataProperty.dir/all: zc/src/CMakeFiles/zc.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty.dir/build.make examples/CMakeFiles/analyzeDataProperty.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty.dir/build.make examples/CMakeFiles/analyzeDataProperty.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZC/Z-checker/build/CMakeFiles --progress-num=1,2 "Built target analyzeDataProperty"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles --progress-num=1,2 "Built target analyzeDataProperty"
 .PHONY : examples/CMakeFiles/analyzeDataProperty.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/analyzeDataProperty.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/analyzeDataProperty.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/analyzeDataProperty.dir/rule
 
 # Convenience name for target.
@@ -295,14 +295,14 @@ examples/CMakeFiles/analyzeDataProperty.dir/clean:
 examples/CMakeFiles/generateReport.dir/all: zc/src/CMakeFiles/zc.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateReport.dir/build.make examples/CMakeFiles/generateReport.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateReport.dir/build.make examples/CMakeFiles/generateReport.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZC/Z-checker/build/CMakeFiles --progress-num=10,11 "Built target generateReport"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles --progress-num=10,11 "Built target generateReport"
 .PHONY : examples/CMakeFiles/generateReport.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/generateReport.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/generateReport.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/generateReport.dir/rule
 
 # Convenience name for target.
@@ -322,14 +322,14 @@ examples/CMakeFiles/generateReport.dir/clean:
 examples/CMakeFiles/generateGNUPlot.dir/all: zc/src/CMakeFiles/zc.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateGNUPlot.dir/build.make examples/CMakeFiles/generateGNUPlot.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateGNUPlot.dir/build.make examples/CMakeFiles/generateGNUPlot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZC/Z-checker/build/CMakeFiles --progress-num=8,9 "Built target generateGNUPlot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles --progress-num=8,9 "Built target generateGNUPlot"
 .PHONY : examples/CMakeFiles/generateGNUPlot.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/generateGNUPlot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/generateGNUPlot.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/generateGNUPlot.dir/rule
 
 # Convenience name for target.
@@ -349,14 +349,14 @@ examples/CMakeFiles/generateGNUPlot.dir/clean:
 examples/CMakeFiles/testRscript_double.dir/all: zc/src/CMakeFiles/zc.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_double.dir/build.make examples/CMakeFiles/testRscript_double.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_double.dir/build.make examples/CMakeFiles/testRscript_double.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZC/Z-checker/build/CMakeFiles --progress-num=14,15 "Built target testRscript_double"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles --progress-num=14,15 "Built target testRscript_double"
 .PHONY : examples/CMakeFiles/testRscript_double.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/testRscript_double.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/testRscript_double.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/testRscript_double.dir/rule
 
 # Convenience name for target.
@@ -376,14 +376,14 @@ examples/CMakeFiles/testRscript_double.dir/clean:
 examples/CMakeFiles/modifyZCConfig.dir/all: zc/src/CMakeFiles/zc.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/modifyZCConfig.dir/build.make examples/CMakeFiles/modifyZCConfig.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/modifyZCConfig.dir/build.make examples/CMakeFiles/modifyZCConfig.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZC/Z-checker/build/CMakeFiles --progress-num=12,13 "Built target modifyZCConfig"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles --progress-num=12,13 "Built target modifyZCConfig"
 .PHONY : examples/CMakeFiles/modifyZCConfig.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/modifyZCConfig.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/modifyZCConfig.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/modifyZCConfig.dir/rule
 
 # Convenience name for target.
@@ -403,14 +403,14 @@ examples/CMakeFiles/modifyZCConfig.dir/clean:
 examples/CMakeFiles/testRscript_float.dir/all: zc/src/CMakeFiles/zc.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_float.dir/build.make examples/CMakeFiles/testRscript_float.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_float.dir/build.make examples/CMakeFiles/testRscript_float.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZC/Z-checker/build/CMakeFiles --progress-num=16,17 "Built target testRscript_float"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles --progress-num=16,17 "Built target testRscript_float"
 .PHONY : examples/CMakeFiles/testRscript_float.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/testRscript_float.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/testRscript_float.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/testRscript_float.dir/rule
 
 # Convenience name for target.
@@ -430,14 +430,14 @@ examples/CMakeFiles/testRscript_float.dir/clean:
 examples/CMakeFiles/testRscript_readBinFloat.dir/all: zc/src/CMakeFiles/zc.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_readBinFloat.dir/build.make examples/CMakeFiles/testRscript_readBinFloat.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_readBinFloat.dir/build.make examples/CMakeFiles/testRscript_readBinFloat.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZC/Z-checker/build/CMakeFiles --progress-num=18,19 "Built target testRscript_readBinFloat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles --progress-num=18,19 "Built target testRscript_readBinFloat"
 .PHONY : examples/CMakeFiles/testRscript_readBinFloat.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/testRscript_readBinFloat.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/testRscript_readBinFloat.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/testRscript_readBinFloat.dir/rule
 
 # Convenience name for target.

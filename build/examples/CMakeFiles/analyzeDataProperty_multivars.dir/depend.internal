@@ -17,4 +17,4 @@ examples/CMakeFiles/analyzeDataProperty_multivars.dir/analyzeDataProperty_multiv
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/examples/analyzeDataProperty_multivars.c
+ /homes/xyu/cuZ-checker/cuZ-checker/examples/analyzeDataProperty_multivars.c

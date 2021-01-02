@@ -17,4 +17,4 @@ examples/CMakeFiles/modifyZCConfig.dir/modifyZCConfig.c.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/examples/modifyZCConfig.c
+ /homes/xyu/cuZ-checker/cuZ-checker/examples/modifyZCConfig.c

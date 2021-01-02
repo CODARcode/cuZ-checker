@@ -126,13 +126,13 @@ ZC_conf.h
 mpi.h
 -
 
-/homes/xyu/cuZC/Z-checker/examples/analyzeDataProperty.c
+/homes/xyu/cuZ-checker/cuZ-checker/examples/analyzeDataProperty.c
 stdio.h
 -
 string.h
 -
 ZC_rw.h
-/homes/xyu/cuZC/Z-checker/examples/ZC_rw.h
+/homes/xyu/cuZ-checker/cuZ-checker/examples/ZC_rw.h
 zc.h
-/homes/xyu/cuZC/Z-checker/examples/zc.h
+/homes/xyu/cuZ-checker/cuZ-checker/examples/zc.h
 

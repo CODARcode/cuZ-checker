@@ -126,7 +126,7 @@ ZC_conf.h
 mpi.h
 -
 
-/homes/xyu/cuZC/Z-checker/examples/compareDataSets.cu
+/homes/xyu/cuZ-checker/cuZ-checker/examples/compareDataSets.cu
 stdio.h
 -
 string.h

@@ -1,1 +1,1 @@
-/usr/bin/cc CMakeFiles/analyzeDataProperty.dir/analyzeDataProperty.c.o -o ../bin/analyzeDataProperty  -Wl,-rpath,/homes/xyu/cuZC/Z-checker/build/lib: ../lib/libzc.so 
+/usr/bin/cc CMakeFiles/analyzeDataProperty.dir/analyzeDataProperty.c.o -o ../bin/analyzeDataProperty  -Wl,-rpath,/homes/xyu/cuZ-checker/cuZ-checker/build/lib: ../lib/libzc.so 

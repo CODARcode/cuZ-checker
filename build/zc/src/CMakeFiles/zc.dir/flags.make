@@ -5,13 +5,13 @@
 # compile CUDA with /software/cuda-10.2/bin/nvcc
 C_DEFINES = -Dzc_EXPORTS
 
-C_INCLUDES = -I/homes/xyu/cuZC/Z-checker/zc/include
+C_INCLUDES = -I/homes/xyu/cuZ-checker/cuZ-checker/zc/include
 
 C_FLAGS = -fPIC
 
 CUDA_DEFINES = -Dzc_EXPORTS
 
-CUDA_INCLUDES = -I/homes/xyu/cuZC/Z-checker/zc/include
+CUDA_INCLUDES = -I/homes/xyu/cuZ-checker/cuZ-checker/zc/include
 
 CUDA_FLAGS =  -Xcompiler=-Wall --generate-code=arch=compute_70,code=[compute_70,sm_70] --generate-code=arch=compute_75,code=[compute_75,sm_75] -Xcompiler=-fPIC -std=c++11
 

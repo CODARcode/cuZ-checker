@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/zc.dir/cmake_device_link.o"
   "CMakeFiles/zc.dir/cuZC_entry.cu.o"
   "CMakeFiles/zc.dir/cuZC_ssim.cu.o"
+  "CMakeFiles/zc.dir/cuZC_typeOne.cu.o"
+  "CMakeFiles/zc.dir/cuZC_typeTwo.cu.o"
   "CMakeFiles/zc.dir/dictionary.c.o"
   "CMakeFiles/zc.dir/iniparser.c.o"
   "CMakeFiles/zc.dir/timingGPU.cu.o"

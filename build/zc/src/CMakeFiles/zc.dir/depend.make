@@ -328,6 +328,8 @@ zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o: ../zc/include/ZC_ssim.h
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o: ../zc/include/ZC_util.h
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o: ../zc/include/cuZC_entry.h
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o: ../zc/include/cuZC_ssim.h
+zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o: ../zc/include/cuZC_typeOne.h
+zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o: ../zc/include/cuZC_typeTwo.h
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o: ../zc/include/der.hpp
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o: ../zc/include/dictionary.h
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_double.cpp.o: ../zc/include/idx.hpp
@@ -361,6 +363,8 @@ zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o: ../zc/include/ZC_ssim.h
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o: ../zc/include/ZC_util.h
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o: ../zc/include/cuZC_entry.h
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o: ../zc/include/cuZC_ssim.h
+zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o: ../zc/include/cuZC_typeOne.h
+zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o: ../zc/include/cuZC_typeTwo.h
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o: ../zc/include/der.hpp
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o: ../zc/include/dictionary.h
 zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o: ../zc/include/idx.hpp
@@ -378,6 +382,8 @@ zc/src/CMakeFiles/zc.dir/ZC_CompareData_float.cpp.o: ../zc/src/ZC_CompareData_fl
 
 zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o: ../zc/include/cuZC_entry.h
 zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o: ../zc/include/cuZC_ssim.h
+zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o: ../zc/include/cuZC_typeOne.h
+zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o: ../zc/include/cuZC_typeTwo.h
 zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o: ../zc/include/der.hpp
 zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o: ../zc/include/idx.hpp
 zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o: ../zc/include/m_basic.hpp
@@ -393,6 +399,8 @@ zc/src/CMakeFiles/zc.dir/cuZC_entry.cu.o: ../zc/src/cuZC_entry.cu
 
 zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/include/cuZC_entry.h
 zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/include/cuZC_ssim.h
+zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/include/cuZC_typeOne.h
+zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/include/cuZC_typeTwo.h
 zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/include/der.hpp
 zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/include/idx.hpp
 zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/include/m_basic.hpp
@@ -404,6 +412,38 @@ zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/include/norm.hpp
 zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/include/others.hpp
 zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/include/ssim.hpp
 zc/src/CMakeFiles/zc.dir/cuZC_ssim.cu.o: ../zc/src/cuZC_ssim.cu
+
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/cuZC_entry.h
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/cuZC_ssim.h
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/cuZC_typeOne.h
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/cuZC_typeTwo.h
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/der.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/idx.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/m_basic.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/m_der.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/m_der_metrics.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/m_norm.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/matrix.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/norm.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/others.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/include/ssim.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeOne.cu.o: ../zc/src/cuZC_typeOne.cu
+
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/cuZC_entry.h
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/cuZC_ssim.h
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/cuZC_typeOne.h
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/cuZC_typeTwo.h
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/der.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/idx.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/m_basic.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/m_der.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/m_der_metrics.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/m_norm.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/matrix.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/norm.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/others.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/include/ssim.hpp
+zc/src/CMakeFiles/zc.dir/cuZC_typeTwo.cu.o: ../zc/src/cuZC_typeTwo.cu
 
 zc/src/CMakeFiles/zc.dir/timingGPU.cu.o: ../zc/include/timingGPU.h
 zc/src/CMakeFiles/zc.dir/timingGPU.cu.o: ../zc/src/timingGPU.cu
@@ -422,6 +462,8 @@ zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o: ../zc/include/ZC_latex.h
 zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o: ../zc/include/ZC_rw.h
 zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o: ../zc/include/cuZC_entry.h
 zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o: ../zc/include/cuZC_ssim.h
+zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o: ../zc/include/cuZC_typeOne.h
+zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o: ../zc/include/cuZC_typeTwo.h
 zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o: ../zc/include/der.hpp
 zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o: ../zc/include/dictionary.h
 zc/src/CMakeFiles/zc.dir/zc_derivativeMetrics.cpp.o: ../zc/include/idx.hpp

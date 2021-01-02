@@ -126,11 +126,11 @@ ZC_conf.h
 mpi.h
 -
 
-/homes/xyu/cuZC/Z-checker/examples/modifyZCConfig.c
+/homes/xyu/cuZ-checker/cuZ-checker/examples/modifyZCConfig.c
 stdio.h
 -
 zc.h
-/homes/xyu/cuZC/Z-checker/examples/zc.h
+/homes/xyu/cuZ-checker/cuZ-checker/examples/zc.h
 ZC_rw.h
-/homes/xyu/cuZC/Z-checker/examples/ZC_rw.h
+/homes/xyu/cuZ-checker/cuZ-checker/examples/ZC_rw.h
 

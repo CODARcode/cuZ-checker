@@ -1,4 +1,4 @@
-# Install script for directory: /homes/xyu/cuZC/Z-checker
+# Install script for directory: /homes/xyu/cuZ-checker/cuZ-checker
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/homes/xyu/cuZC/Z-checker/build/zc/cmake_install.cmake")
-  include("/homes/xyu/cuZC/Z-checker/build/examples/cmake_install.cmake")
+  include("/homes/xyu/cuZ-checker/cuZ-checker/build/zc/cmake_install.cmake")
+  include("/homes/xyu/cuZ-checker/cuZ-checker/build/examples/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/homes/xyu/cuZC/Z-checker/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/homes/xyu/cuZ-checker/cuZ-checker/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

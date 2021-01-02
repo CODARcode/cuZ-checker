@@ -67,10 +67,10 @@ RM = /lambda_stor/homes/xyu/cmake/cmake-3.19.1-Linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /homes/xyu/cuZC/Z-checker
+CMAKE_SOURCE_DIR = /homes/xyu/cuZ-checker/cuZ-checker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /homes/xyu/cuZC/Z-checker/build
+CMAKE_BINARY_DIR = /homes/xyu/cuZ-checker/cuZ-checker/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -145,14 +145,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /homes/xyu/cuZC/Z-checker/build && $(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles /homes/xyu/cuZC/Z-checker/build/examples//CMakeFiles/progress.marks
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZC/Z-checker/build/CMakeFiles 0
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles /homes/xyu/cuZ-checker/cuZ-checker/build/examples//CMakeFiles/progress.marks
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/clean
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/clean
 .PHONY : clean
 
 # The main clean target
@@ -162,22 +162,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /homes/xyu/cuZC/Z-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/CMakeFiles/compareDataSets.dir/rule:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/compareDataSets.dir/rule
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/compareDataSets.dir/rule
 .PHONY : examples/CMakeFiles/compareDataSets.dir/rule
 
 # Convenience name for target.
@@ -187,12 +187,12 @@ compareDataSets: examples/CMakeFiles/compareDataSets.dir/rule
 
 # fast build rule for target.
 compareDataSets/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/compareDataSets.dir/build.make examples/CMakeFiles/compareDataSets.dir/build
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/compareDataSets.dir/build.make examples/CMakeFiles/compareDataSets.dir/build
 .PHONY : compareDataSets/fast
 
 # Convenience name for target.
 examples/CMakeFiles/analyzeDataProperty_multivars.dir/rule:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/analyzeDataProperty_multivars.dir/rule
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/analyzeDataProperty_multivars.dir/rule
 .PHONY : examples/CMakeFiles/analyzeDataProperty_multivars.dir/rule
 
 # Convenience name for target.
@@ -202,12 +202,12 @@ analyzeDataProperty_multivars: examples/CMakeFiles/analyzeDataProperty_multivars
 
 # fast build rule for target.
 analyzeDataProperty_multivars/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty_multivars.dir/build.make examples/CMakeFiles/analyzeDataProperty_multivars.dir/build
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty_multivars.dir/build.make examples/CMakeFiles/analyzeDataProperty_multivars.dir/build
 .PHONY : analyzeDataProperty_multivars/fast
 
 # Convenience name for target.
 examples/CMakeFiles/analyzeDataProperty.dir/rule:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/analyzeDataProperty.dir/rule
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/analyzeDataProperty.dir/rule
 .PHONY : examples/CMakeFiles/analyzeDataProperty.dir/rule
 
 # Convenience name for target.
@@ -217,12 +217,12 @@ analyzeDataProperty: examples/CMakeFiles/analyzeDataProperty.dir/rule
 
 # fast build rule for target.
 analyzeDataProperty/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty.dir/build.make examples/CMakeFiles/analyzeDataProperty.dir/build
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty.dir/build.make examples/CMakeFiles/analyzeDataProperty.dir/build
 .PHONY : analyzeDataProperty/fast
 
 # Convenience name for target.
 examples/CMakeFiles/generateReport.dir/rule:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/generateReport.dir/rule
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/generateReport.dir/rule
 .PHONY : examples/CMakeFiles/generateReport.dir/rule
 
 # Convenience name for target.
@@ -232,12 +232,12 @@ generateReport: examples/CMakeFiles/generateReport.dir/rule
 
 # fast build rule for target.
 generateReport/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateReport.dir/build.make examples/CMakeFiles/generateReport.dir/build
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateReport.dir/build.make examples/CMakeFiles/generateReport.dir/build
 .PHONY : generateReport/fast
 
 # Convenience name for target.
 examples/CMakeFiles/generateGNUPlot.dir/rule:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/generateGNUPlot.dir/rule
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/generateGNUPlot.dir/rule
 .PHONY : examples/CMakeFiles/generateGNUPlot.dir/rule
 
 # Convenience name for target.
@@ -247,12 +247,12 @@ generateGNUPlot: examples/CMakeFiles/generateGNUPlot.dir/rule
 
 # fast build rule for target.
 generateGNUPlot/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateGNUPlot.dir/build.make examples/CMakeFiles/generateGNUPlot.dir/build
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateGNUPlot.dir/build.make examples/CMakeFiles/generateGNUPlot.dir/build
 .PHONY : generateGNUPlot/fast
 
 # Convenience name for target.
 examples/CMakeFiles/testRscript_double.dir/rule:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/testRscript_double.dir/rule
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/testRscript_double.dir/rule
 .PHONY : examples/CMakeFiles/testRscript_double.dir/rule
 
 # Convenience name for target.
@@ -262,12 +262,12 @@ testRscript_double: examples/CMakeFiles/testRscript_double.dir/rule
 
 # fast build rule for target.
 testRscript_double/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_double.dir/build.make examples/CMakeFiles/testRscript_double.dir/build
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_double.dir/build.make examples/CMakeFiles/testRscript_double.dir/build
 .PHONY : testRscript_double/fast
 
 # Convenience name for target.
 examples/CMakeFiles/modifyZCConfig.dir/rule:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/modifyZCConfig.dir/rule
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/modifyZCConfig.dir/rule
 .PHONY : examples/CMakeFiles/modifyZCConfig.dir/rule
 
 # Convenience name for target.
@@ -277,12 +277,12 @@ modifyZCConfig: examples/CMakeFiles/modifyZCConfig.dir/rule
 
 # fast build rule for target.
 modifyZCConfig/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/modifyZCConfig.dir/build.make examples/CMakeFiles/modifyZCConfig.dir/build
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/modifyZCConfig.dir/build.make examples/CMakeFiles/modifyZCConfig.dir/build
 .PHONY : modifyZCConfig/fast
 
 # Convenience name for target.
 examples/CMakeFiles/testRscript_float.dir/rule:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/testRscript_float.dir/rule
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/testRscript_float.dir/rule
 .PHONY : examples/CMakeFiles/testRscript_float.dir/rule
 
 # Convenience name for target.
@@ -292,12 +292,12 @@ testRscript_float: examples/CMakeFiles/testRscript_float.dir/rule
 
 # fast build rule for target.
 testRscript_float/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_float.dir/build.make examples/CMakeFiles/testRscript_float.dir/build
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_float.dir/build.make examples/CMakeFiles/testRscript_float.dir/build
 .PHONY : testRscript_float/fast
 
 # Convenience name for target.
 examples/CMakeFiles/testRscript_readBinFloat.dir/rule:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/testRscript_readBinFloat.dir/rule
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/testRscript_readBinFloat.dir/rule
 .PHONY : examples/CMakeFiles/testRscript_readBinFloat.dir/rule
 
 # Convenience name for target.
@@ -307,7 +307,7 @@ testRscript_readBinFloat: examples/CMakeFiles/testRscript_readBinFloat.dir/rule
 
 # fast build rule for target.
 testRscript_readBinFloat/fast:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_readBinFloat.dir/build.make examples/CMakeFiles/testRscript_readBinFloat.dir/build
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_readBinFloat.dir/build.make examples/CMakeFiles/testRscript_readBinFloat.dir/build
 .PHONY : testRscript_readBinFloat/fast
 
 analyzeDataProperty.o: analyzeDataProperty.c.o
@@ -316,7 +316,7 @@ analyzeDataProperty.o: analyzeDataProperty.c.o
 
 # target to build an object file
 analyzeDataProperty.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty.dir/build.make examples/CMakeFiles/analyzeDataProperty.dir/analyzeDataProperty.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty.dir/build.make examples/CMakeFiles/analyzeDataProperty.dir/analyzeDataProperty.c.o
 .PHONY : analyzeDataProperty.c.o
 
 analyzeDataProperty.i: analyzeDataProperty.c.i
@@ -325,7 +325,7 @@ analyzeDataProperty.i: analyzeDataProperty.c.i
 
 # target to preprocess a source file
 analyzeDataProperty.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty.dir/build.make examples/CMakeFiles/analyzeDataProperty.dir/analyzeDataProperty.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty.dir/build.make examples/CMakeFiles/analyzeDataProperty.dir/analyzeDataProperty.c.i
 .PHONY : analyzeDataProperty.c.i
 
 analyzeDataProperty.s: analyzeDataProperty.c.s
@@ -334,7 +334,7 @@ analyzeDataProperty.s: analyzeDataProperty.c.s
 
 # target to generate assembly for a file
 analyzeDataProperty.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty.dir/build.make examples/CMakeFiles/analyzeDataProperty.dir/analyzeDataProperty.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty.dir/build.make examples/CMakeFiles/analyzeDataProperty.dir/analyzeDataProperty.c.s
 .PHONY : analyzeDataProperty.c.s
 
 analyzeDataProperty_multivars.o: analyzeDataProperty_multivars.c.o
@@ -343,7 +343,7 @@ analyzeDataProperty_multivars.o: analyzeDataProperty_multivars.c.o
 
 # target to build an object file
 analyzeDataProperty_multivars.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty_multivars.dir/build.make examples/CMakeFiles/analyzeDataProperty_multivars.dir/analyzeDataProperty_multivars.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty_multivars.dir/build.make examples/CMakeFiles/analyzeDataProperty_multivars.dir/analyzeDataProperty_multivars.c.o
 .PHONY : analyzeDataProperty_multivars.c.o
 
 analyzeDataProperty_multivars.i: analyzeDataProperty_multivars.c.i
@@ -352,7 +352,7 @@ analyzeDataProperty_multivars.i: analyzeDataProperty_multivars.c.i
 
 # target to preprocess a source file
 analyzeDataProperty_multivars.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty_multivars.dir/build.make examples/CMakeFiles/analyzeDataProperty_multivars.dir/analyzeDataProperty_multivars.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty_multivars.dir/build.make examples/CMakeFiles/analyzeDataProperty_multivars.dir/analyzeDataProperty_multivars.c.i
 .PHONY : analyzeDataProperty_multivars.c.i
 
 analyzeDataProperty_multivars.s: analyzeDataProperty_multivars.c.s
@@ -361,7 +361,7 @@ analyzeDataProperty_multivars.s: analyzeDataProperty_multivars.c.s
 
 # target to generate assembly for a file
 analyzeDataProperty_multivars.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty_multivars.dir/build.make examples/CMakeFiles/analyzeDataProperty_multivars.dir/analyzeDataProperty_multivars.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/analyzeDataProperty_multivars.dir/build.make examples/CMakeFiles/analyzeDataProperty_multivars.dir/analyzeDataProperty_multivars.c.s
 .PHONY : analyzeDataProperty_multivars.c.s
 
 compareDataSets.o: compareDataSets.cu.o
@@ -370,7 +370,7 @@ compareDataSets.o: compareDataSets.cu.o
 
 # target to build an object file
 compareDataSets.cu.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/compareDataSets.dir/build.make examples/CMakeFiles/compareDataSets.dir/compareDataSets.cu.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/compareDataSets.dir/build.make examples/CMakeFiles/compareDataSets.dir/compareDataSets.cu.o
 .PHONY : compareDataSets.cu.o
 
 compareDataSets.i: compareDataSets.cu.i
@@ -379,7 +379,7 @@ compareDataSets.i: compareDataSets.cu.i
 
 # target to preprocess a source file
 compareDataSets.cu.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/compareDataSets.dir/build.make examples/CMakeFiles/compareDataSets.dir/compareDataSets.cu.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/compareDataSets.dir/build.make examples/CMakeFiles/compareDataSets.dir/compareDataSets.cu.i
 .PHONY : compareDataSets.cu.i
 
 compareDataSets.s: compareDataSets.cu.s
@@ -388,7 +388,7 @@ compareDataSets.s: compareDataSets.cu.s
 
 # target to generate assembly for a file
 compareDataSets.cu.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/compareDataSets.dir/build.make examples/CMakeFiles/compareDataSets.dir/compareDataSets.cu.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/compareDataSets.dir/build.make examples/CMakeFiles/compareDataSets.dir/compareDataSets.cu.s
 .PHONY : compareDataSets.cu.s
 
 generateGNUPlot.o: generateGNUPlot.c.o
@@ -397,7 +397,7 @@ generateGNUPlot.o: generateGNUPlot.c.o
 
 # target to build an object file
 generateGNUPlot.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateGNUPlot.dir/build.make examples/CMakeFiles/generateGNUPlot.dir/generateGNUPlot.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateGNUPlot.dir/build.make examples/CMakeFiles/generateGNUPlot.dir/generateGNUPlot.c.o
 .PHONY : generateGNUPlot.c.o
 
 generateGNUPlot.i: generateGNUPlot.c.i
@@ -406,7 +406,7 @@ generateGNUPlot.i: generateGNUPlot.c.i
 
 # target to preprocess a source file
 generateGNUPlot.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateGNUPlot.dir/build.make examples/CMakeFiles/generateGNUPlot.dir/generateGNUPlot.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateGNUPlot.dir/build.make examples/CMakeFiles/generateGNUPlot.dir/generateGNUPlot.c.i
 .PHONY : generateGNUPlot.c.i
 
 generateGNUPlot.s: generateGNUPlot.c.s
@@ -415,7 +415,7 @@ generateGNUPlot.s: generateGNUPlot.c.s
 
 # target to generate assembly for a file
 generateGNUPlot.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateGNUPlot.dir/build.make examples/CMakeFiles/generateGNUPlot.dir/generateGNUPlot.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateGNUPlot.dir/build.make examples/CMakeFiles/generateGNUPlot.dir/generateGNUPlot.c.s
 .PHONY : generateGNUPlot.c.s
 
 generateReport.o: generateReport.c.o
@@ -424,7 +424,7 @@ generateReport.o: generateReport.c.o
 
 # target to build an object file
 generateReport.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateReport.dir/build.make examples/CMakeFiles/generateReport.dir/generateReport.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateReport.dir/build.make examples/CMakeFiles/generateReport.dir/generateReport.c.o
 .PHONY : generateReport.c.o
 
 generateReport.i: generateReport.c.i
@@ -433,7 +433,7 @@ generateReport.i: generateReport.c.i
 
 # target to preprocess a source file
 generateReport.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateReport.dir/build.make examples/CMakeFiles/generateReport.dir/generateReport.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateReport.dir/build.make examples/CMakeFiles/generateReport.dir/generateReport.c.i
 .PHONY : generateReport.c.i
 
 generateReport.s: generateReport.c.s
@@ -442,7 +442,7 @@ generateReport.s: generateReport.c.s
 
 # target to generate assembly for a file
 generateReport.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateReport.dir/build.make examples/CMakeFiles/generateReport.dir/generateReport.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/generateReport.dir/build.make examples/CMakeFiles/generateReport.dir/generateReport.c.s
 .PHONY : generateReport.c.s
 
 modifyZCConfig.o: modifyZCConfig.c.o
@@ -451,7 +451,7 @@ modifyZCConfig.o: modifyZCConfig.c.o
 
 # target to build an object file
 modifyZCConfig.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/modifyZCConfig.dir/build.make examples/CMakeFiles/modifyZCConfig.dir/modifyZCConfig.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/modifyZCConfig.dir/build.make examples/CMakeFiles/modifyZCConfig.dir/modifyZCConfig.c.o
 .PHONY : modifyZCConfig.c.o
 
 modifyZCConfig.i: modifyZCConfig.c.i
@@ -460,7 +460,7 @@ modifyZCConfig.i: modifyZCConfig.c.i
 
 # target to preprocess a source file
 modifyZCConfig.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/modifyZCConfig.dir/build.make examples/CMakeFiles/modifyZCConfig.dir/modifyZCConfig.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/modifyZCConfig.dir/build.make examples/CMakeFiles/modifyZCConfig.dir/modifyZCConfig.c.i
 .PHONY : modifyZCConfig.c.i
 
 modifyZCConfig.s: modifyZCConfig.c.s
@@ -469,7 +469,7 @@ modifyZCConfig.s: modifyZCConfig.c.s
 
 # target to generate assembly for a file
 modifyZCConfig.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/modifyZCConfig.dir/build.make examples/CMakeFiles/modifyZCConfig.dir/modifyZCConfig.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/modifyZCConfig.dir/build.make examples/CMakeFiles/modifyZCConfig.dir/modifyZCConfig.c.s
 .PHONY : modifyZCConfig.c.s
 
 testRscript_double.o: testRscript_double.c.o
@@ -478,7 +478,7 @@ testRscript_double.o: testRscript_double.c.o
 
 # target to build an object file
 testRscript_double.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_double.dir/build.make examples/CMakeFiles/testRscript_double.dir/testRscript_double.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_double.dir/build.make examples/CMakeFiles/testRscript_double.dir/testRscript_double.c.o
 .PHONY : testRscript_double.c.o
 
 testRscript_double.i: testRscript_double.c.i
@@ -487,7 +487,7 @@ testRscript_double.i: testRscript_double.c.i
 
 # target to preprocess a source file
 testRscript_double.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_double.dir/build.make examples/CMakeFiles/testRscript_double.dir/testRscript_double.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_double.dir/build.make examples/CMakeFiles/testRscript_double.dir/testRscript_double.c.i
 .PHONY : testRscript_double.c.i
 
 testRscript_double.s: testRscript_double.c.s
@@ -496,7 +496,7 @@ testRscript_double.s: testRscript_double.c.s
 
 # target to generate assembly for a file
 testRscript_double.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_double.dir/build.make examples/CMakeFiles/testRscript_double.dir/testRscript_double.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_double.dir/build.make examples/CMakeFiles/testRscript_double.dir/testRscript_double.c.s
 .PHONY : testRscript_double.c.s
 
 testRscript_float.o: testRscript_float.c.o
@@ -505,7 +505,7 @@ testRscript_float.o: testRscript_float.c.o
 
 # target to build an object file
 testRscript_float.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_float.dir/build.make examples/CMakeFiles/testRscript_float.dir/testRscript_float.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_float.dir/build.make examples/CMakeFiles/testRscript_float.dir/testRscript_float.c.o
 .PHONY : testRscript_float.c.o
 
 testRscript_float.i: testRscript_float.c.i
@@ -514,7 +514,7 @@ testRscript_float.i: testRscript_float.c.i
 
 # target to preprocess a source file
 testRscript_float.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_float.dir/build.make examples/CMakeFiles/testRscript_float.dir/testRscript_float.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_float.dir/build.make examples/CMakeFiles/testRscript_float.dir/testRscript_float.c.i
 .PHONY : testRscript_float.c.i
 
 testRscript_float.s: testRscript_float.c.s
@@ -523,7 +523,7 @@ testRscript_float.s: testRscript_float.c.s
 
 # target to generate assembly for a file
 testRscript_float.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_float.dir/build.make examples/CMakeFiles/testRscript_float.dir/testRscript_float.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_float.dir/build.make examples/CMakeFiles/testRscript_float.dir/testRscript_float.c.s
 .PHONY : testRscript_float.c.s
 
 testRscript_readBinFloat.o: testRscript_readBinFloat.c.o
@@ -532,7 +532,7 @@ testRscript_readBinFloat.o: testRscript_readBinFloat.c.o
 
 # target to build an object file
 testRscript_readBinFloat.c.o:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_readBinFloat.dir/build.make examples/CMakeFiles/testRscript_readBinFloat.dir/testRscript_readBinFloat.c.o
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_readBinFloat.dir/build.make examples/CMakeFiles/testRscript_readBinFloat.dir/testRscript_readBinFloat.c.o
 .PHONY : testRscript_readBinFloat.c.o
 
 testRscript_readBinFloat.i: testRscript_readBinFloat.c.i
@@ -541,7 +541,7 @@ testRscript_readBinFloat.i: testRscript_readBinFloat.c.i
 
 # target to preprocess a source file
 testRscript_readBinFloat.c.i:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_readBinFloat.dir/build.make examples/CMakeFiles/testRscript_readBinFloat.dir/testRscript_readBinFloat.c.i
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_readBinFloat.dir/build.make examples/CMakeFiles/testRscript_readBinFloat.dir/testRscript_readBinFloat.c.i
 .PHONY : testRscript_readBinFloat.c.i
 
 testRscript_readBinFloat.s: testRscript_readBinFloat.c.s
@@ -550,7 +550,7 @@ testRscript_readBinFloat.s: testRscript_readBinFloat.c.s
 
 # target to generate assembly for a file
 testRscript_readBinFloat.c.s:
-	cd /homes/xyu/cuZC/Z-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_readBinFloat.dir/build.make examples/CMakeFiles/testRscript_readBinFloat.dir/testRscript_readBinFloat.c.s
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/testRscript_readBinFloat.dir/build.make examples/CMakeFiles/testRscript_readBinFloat.dir/testRscript_readBinFloat.c.s
 .PHONY : testRscript_readBinFloat.c.s
 
 # Help Target
@@ -612,6 +612,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /homes/xyu/cuZC/Z-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /homes/xyu/cuZ-checker/cuZ-checker/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

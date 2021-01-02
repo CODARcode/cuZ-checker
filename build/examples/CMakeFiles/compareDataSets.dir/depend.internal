@@ -17,4 +17,4 @@ examples/CMakeFiles/compareDataSets.dir/compareDataSets.cu.o
  ../zc/include/dictionary.h
  ../zc/include/iniparser.h
  ../zc/include/zc.h
- /homes/xyu/cuZC/Z-checker/examples/compareDataSets.cu
+ /homes/xyu/cuZ-checker/cuZ-checker/examples/compareDataSets.cu

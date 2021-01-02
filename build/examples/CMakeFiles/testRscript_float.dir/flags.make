@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/homes/xyu/cuZC/Z-checker/zc/include
+C_INCLUDES = -I/homes/xyu/cuZ-checker/cuZ-checker/zc/include
 
 C_FLAGS = 
 

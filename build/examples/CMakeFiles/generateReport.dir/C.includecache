@@ -126,7 +126,7 @@ ZC_conf.h
 mpi.h
 -
 
-/homes/xyu/cuZC/Z-checker/examples/generateReport.c
+/homes/xyu/cuZ-checker/cuZ-checker/examples/generateReport.c
 stdio.h
 -
 string.h

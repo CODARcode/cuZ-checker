@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/homes/xyu/cuZC/Z-checker/examples/analyzeDataProperty.c" "/homes/xyu/cuZC/Z-checker/build/examples/CMakeFiles/analyzeDataProperty.dir/analyzeDataProperty.c.o"
+  "/homes/xyu/cuZ-checker/cuZ-checker/examples/analyzeDataProperty.c" "/homes/xyu/cuZ-checker/cuZ-checker/build/examples/CMakeFiles/analyzeDataProperty.dir/analyzeDataProperty.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/homes/xyu/cuZC/Z-checker/build/zc/src/CMakeFiles/zc.dir/DependInfo.cmake"
+  "/homes/xyu/cuZ-checker/cuZ-checker/build/zc/src/CMakeFiles/zc.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

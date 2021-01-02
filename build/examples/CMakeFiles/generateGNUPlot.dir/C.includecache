@@ -126,7 +126,7 @@ ZC_conf.h
 mpi.h
 -
 
-/homes/xyu/cuZC/Z-checker/examples/generateGNUPlot.c
+/homes/xyu/cuZ-checker/cuZ-checker/examples/generateGNUPlot.c
 stdio.h
 -
 string.h
