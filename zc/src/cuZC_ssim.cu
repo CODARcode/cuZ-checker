@@ -151,7 +151,7 @@ __global__ void ssim(float *data1, float *data2, double *results, int r3, int r2
                 int Winx = i / (ssimSize*ssimSize);
                 int Winy = i % (ssimSize*ssimSize) / ssimSize;
                 int Winz = i % (ssimSize*ssimSize) % ssimSize;
-                int index = (Offsetx + Winx) * r1 * r2 + (Offsety + Winy) * r2 + (Offsetz + Winz);
+                int index = (Offsetx + Winx) * r1 * r2 + (Offsety + Winy) * r1 + (Offsetz + Winz);
                 float xdata = data1[index];
                 float ydata = data2[index];
                 //if (i<blockDim.x)

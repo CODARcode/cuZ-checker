@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/testRscript_readBinFloat.dir/testRscript_readBinFloat.c.o -o ../bin/testRscript_readBinFloat  -Wl,-rpath,/homes/xyu/cuZC/Z-checker/build/lib ../lib/libzc.so 

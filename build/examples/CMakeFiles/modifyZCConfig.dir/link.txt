@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/modifyZCConfig.dir/modifyZCConfig.c.o -o ../bin/modifyZCConfig  -Wl,-rpath,/homes/xyu/cuZC/Z-checker/build/lib: ../lib/libzc.so 

@@ -20,6 +20,7 @@ inline double matrix<dT>::der_2d_dim1(int idx0,int idx1){
 template <typename dT>
 inline double matrix<dT>::der_3d_dim0(int idx0,int idx1,int idx2){
   return (data[idx0+1+size0*(idx1+size1*idx2)]-data[idx0-1+size0*(idx1+size1*idx2)])/2;
+  //return data[idx0-1+size0*(idx1+size1*idx2)];
 }
 
 template <typename dT>
