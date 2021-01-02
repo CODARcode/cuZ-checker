@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/generateGNUPlot.dir/generateGNUPlot.c.o -o ../bin/generateGNUPlot  -Wl,-rpath,/homes/xyu/cuZ-checker/cuZ-checker/build/lib: ../lib/libzc.so 

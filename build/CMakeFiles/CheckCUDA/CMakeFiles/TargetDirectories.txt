@@ -1,2 +1,0 @@
-/lambda_stor/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles/CheckCUDA/CMakeFiles/rebuild_cache.dir
-/lambda_stor/homes/xyu/cuZ-checker/cuZ-checker/build/CMakeFiles/CheckCUDA/CMakeFiles/edit_cache.dir

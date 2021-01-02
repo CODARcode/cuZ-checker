@@ -1,1 +1,0 @@
-/usr/bin/g++ CMakeFiles/compareDataSets.dir/compareDataSets.cu.o CMakeFiles/compareDataSets.dir/cmake_device_link.o -o ../bin/compareDataSets  -Wl,-rpath,/homes/xyu/cuZ-checker/cuZ-checker/build/lib: ../lib/libzc.so -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/software/cuda-10.2/targets/x86_64-linux/lib/stubs" -L"/software/cuda-10.2/targets/x86_64-linux/lib"

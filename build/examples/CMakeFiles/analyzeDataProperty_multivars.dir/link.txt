@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/analyzeDataProperty_multivars.dir/analyzeDataProperty_multivars.c.o -o ../bin/analyzeDataProperty_multivars  -Wl,-rpath,/homes/xyu/cuZ-checker/cuZ-checker/build/lib: ../lib/libzc.so 
