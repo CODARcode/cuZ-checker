@@ -147,3 +147,53 @@ float *cu_typeTwo(float *ddata, float *der, size_t r3, size_t r2, size_t r1, siz
 
     return der;
 }
+
+double cu_typeThree(float *data1, float *data2, int r3, int r2, int r1, int ssimSize, int ssimShift) 
+{
+
+    //for (int i=r1*r2*6+r2*6;i<r1*r2*6+r2*6+7;i++){
+    ////for (int i=0;i<r1*r2*r3;i++){
+    //    printf("data%i=%e, %e\n",i, data1[i], data2[i]);
+    //    printf("data%i=%e, %e\n",i, data1[i], data2[i]);
+
+    //}
+    float *ddata1, *ddata2;
+    double *dresults;
+    double results[2*30*((r3-ssimSize+1)/ssimShift)] = { 0 };
+    //for (int i=r1*r2*6+r2*6;i<r1*r2*6+r2*6+7;i++){
+    ////for (int i=0;i<r1*r2*r3;i++){
+    //    printf("data%i=%e, %e\n",i, data1[i], data2[i]);
+    //    printf("data%i=%e, %e\n",i, data1[i], data2[i]);
+
+    //}
+
+    const int csize = r3 * r2 * r1 * sizeof(float);
+
+    cudaMalloc((void**)&ddata1,   csize); 
+    cudaMalloc((void**)&ddata2,   csize); 
+    cudaMemcpy(ddata1,   data1,   csize, cudaMemcpyHostToDevice); 
+    cudaMemcpy(ddata2,   data2,   csize, cudaMemcpyHostToDevice); 
+
+    const int rsize = 30*2*((r3-ssimSize+1)/ssimShift) * sizeof(double);
+
+    cudaMalloc((void**)&dresults, rsize); 
+    cudaMemcpy(dresults, results, rsize, cudaMemcpyHostToDevice); 
+
+    timer_GPU.StartCounter();
+    dim3 dimBlock(32, 8);
+    dim3 dimGrid(1, 1);
+    type_three<<<dimGrid, dimBlock>>>(ddata1, ddata2, dresults, r3, r2, r1, ssimSize, ssimShift);
+
+    cudaMemcpy(results, dresults, rsize, cudaMemcpyDeviceToHost); 
+    double x=0;
+    printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
+    for (int i=0; i<30*2*((r3-ssimSize+1)/ssimShift); i++){
+        x += results[i];
+        printf("results%i=%e\n",i,results[i]);
+
+    }
+
+    cudaFree(dresults);
+
+    return 0;
+}
