@@ -60,15 +60,15 @@ double zc_calc_metric_der_order1_ssim_float(float *data1, float *data2,
   double result;
   int a=0;
   //for (int i=temp1.size0*temp1.size1*6+temp1.size1*6;i<temp1.size0*temp1.size1*6+temp1.size1*6+7;i++){
-  for (int i=0;i<(r2-2);i++){
-  for (int j=0;j<(r1-2);j++){
-    //printf("hdata%i=%e, %e\n",i, temp1.data[i], temp2.data[i]);
-    if (temp2.data[i*(r1-2)+j]!=0.0)printf("hdata%i=%e, %e\n", a, data1[i*(r1-2)+j], temp2.data[i*(r1-2)+j]);
-      a++;
+  //for (int i=0;i<(r2-2);i++){
+  //for (int j=0;j<(r1-2);j++){
+  //  //printf("hdata%i=%e, %e\n",i, temp1.data[i], temp2.data[i]);
+  //  if (temp2.data[i*(r1-2)+j]!=0.0)printf("hdata%i=%e, %e\n", a, data1[i*(r1-2)+j], temp2.data[i*(r1-2)+j]);
+  //    a++;
 
-  }
-  }
-  exit(0);
+  //}
+  //}
+  //exit(0);
   
   switch (orig.nDim) {
     case 1:
@@ -78,9 +78,11 @@ double zc_calc_metric_der_order1_ssim_float(float *data1, float *data2,
       result=temp1.SSIM_2d_windowed(temp2,ssimSize,ssimSize,ssimShift,ssimShift);
       break;
     case 3:
-      result=temp1.SSIM_3d_windowed(temp2,ssimSize,ssimSize,ssimSize,ssimShift,ssimShift,ssimShift);
+      //result=temp1.SSIM_3d_windowed(temp2,ssimSize,ssimSize,ssimSize,ssimShift,ssimShift,ssimShift);
       //cu_SSIM_3d_windowed(ssimSize,ssimSize,ssimSize,ssimShift,ssimShift,ssimShift);
-      cu_SSIM(temp1.data, temp2.data, temp1.size2, temp1.size1, temp1.size0, ssimSize, ssimShift);
+      //cu_SSIM(temp1.data, temp2.data, temp1.size2, temp1.size1, temp1.size0, ssimSize, ssimShift);
+      cu_typeThree(temp1.data, temp2.data, temp1.size2, temp1.size1, temp1.size0, ssimSize, ssimShift);
+      exit(0);
       break;
     case 4:
       result=temp1.SSIM_4d_windowed(temp2,ssimSize,ssimSize,ssimSize,ssimSize,ssimShift,ssimShift,ssimShift,ssimShift);

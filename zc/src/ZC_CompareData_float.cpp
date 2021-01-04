@@ -17,6 +17,9 @@
 
 #include "matrix.hpp"
 
+int ssimsize = 7;
+int ssimshift = 1;
+
 void ZC_compareData_float(ZC_CompareData* compareResult, float* data1, float* data2, 
 size_t r5, size_t r4, size_t r3, size_t r2, size_t r1)
 {
@@ -61,7 +64,7 @@ size_t r5, size_t r4, size_t r3, size_t r2, size_t r1)
 
 	for (i = 0; i < numOfElem; i++)
 	{
-        //data2[i] = 1;
+        //data2[i] = 5;
 		sum1 += data1[i];
         //if (data1[i]>0.0) printf("test[%i]:%e\n",i, data1[i]);
 		sum2 += data2[i];
@@ -116,9 +119,13 @@ size_t r5, size_t r4, size_t r3, size_t r2, size_t r1)
     sumErrSqr = results[r3*9];
 
     size_t order=1;
-	float *der = (float*)malloc((r3-order*2)*(r2-order*2)*(r1-order*2)*sizeof(float));
-    der = cu_typeTwo(ddata2, der, r3, r2, r1, order);
-    exit(0);
+	//float *der = (float*)malloc((r3-order*2)*(r2-order*2)*(r1-order*2)*sizeof(float));
+    //der = cu_typeTwo(ddata2, der, r3, r2, r1, order);
+    //exit(0);
+	//double *ss = (double*)malloc(100*2*sizeof(double));
+    //memset(ss, 0, 100*2*sizeof(double));
+    //ss = cu_typeThree(ddata1, ddata2, ss, r3, r2, r1, ssimsize, ssimshift);
+    //exit(0);
 	
 	ZC_DataProperty* property = compareResult->property;
 	

@@ -147,3 +147,66 @@ float *cu_typeTwo(float *ddata, float *der, size_t r3, size_t r2, size_t r1, siz
 
     return der;
 }
+
+double cu_typeThree(float *data1, float *data2, int r3, int r2, int r1, int ssimSize, int ssimShift) 
+{
+
+    //for (int i=r1*r2*6+r2*6;i<r1*r2*6+r2*6+7;i++){
+    ////for (int i=0;i<r1*r2*r3;i++){
+    //    printf("data%i=%e, %e\n",i, data1[i], data2[i]);
+    //    printf("data%i=%e, %e\n",i, data1[i], data2[i]);
+
+    //}
+    float *ddata1, *ddata2;
+    double *dresults;
+	double *results = (double*)malloc(r2*r1*((r3-ssimSize+1)/ssimShift)*sizeof(double));
+	//double *results = (double*)malloc(r2*r1*sizeof(double));
+    memset(results, 0, r2*r1*((r3-ssimSize+1)/ssimShift)*sizeof(double));
+    //for (int i=r1*r2*6+r2*6;i<r1*r2*6+r2*6+7;i++){
+    ////for (int i=0;i<r1*r2*r3;i++){
+    //    printf("data%i=%e, %e\n",i, data1[i], data2[i]);
+    //    printf("data%i=%e, %e\n",i, data1[i], data2[i]);
+
+    //}
+    int yNum = (8-ssimSize)/ssimShift+1;
+    int yTotal = (r2-ssimSize)/ssimShift+1;
+    int blksize = yTotal/yNum + (yTotal%yNum?1:0);
+
+    const int csize = r3 * r2 * r1 * sizeof(float);
+
+    cudaMalloc((void**)&ddata1,   csize); 
+    cudaMalloc((void**)&ddata2,   csize); 
+    cudaMemcpy(ddata1,   data1,   csize, cudaMemcpyHostToDevice); 
+    cudaMemcpy(ddata2,   data2,   csize, cudaMemcpyHostToDevice); 
+
+    const int rsize = r1 * r2*((r3-ssimSize+1)/ssimShift) * sizeof(double);
+
+    cudaMalloc((void**)&dresults, rsize); 
+    cudaMemcpy(dresults, results, rsize, cudaMemcpyHostToDevice); 
+
+    timer_GPU.StartCounter();
+    dim3 dimBlock(32, 8);
+    dim3 dimGrid(blksize, 1);
+    type_three<<<dimGrid, dimBlock>>>(ddata1, ddata2, dresults, r3, r2, r1, ssimSize, ssimShift, yNum);
+
+    cudaMemcpy(results, dresults, rsize, cudaMemcpyDeviceToHost); 
+    double x=0, y=0;
+    printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
+    for (int i=0; i<r1*r2*((r3-ssimSize+1)/ssimShift); i++){
+        if (i%r1==0) {
+printf("results%i=%e\n",i/r1-1,x);
+x=0;
+
+        }
+        //if (i%r1==0) printf("delimiter%i\n",(i/r1));
+        x += results[i];
+        y += results[i];
+        //printf("results%i=%e\n",i,results[i]);
+
+    }
+    printf("results=%e\n",y);
+
+    cudaFree(dresults);
+
+    return 0;
+}
