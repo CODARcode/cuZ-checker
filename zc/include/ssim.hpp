@@ -131,11 +131,13 @@ double matrix<dT>::SSIM_3d_windowed(matrix &other, int windowSize0, int windowSi
   
   t = clock();
       for(offset2=0; offset2+windowSize2<=size2; offset2+=offsetInc2){ //MOVING WINDOW
-    for(offset1=0; offset1<2; offset1+=offsetInc1){ //MOVING WINDOW
-    double sum = 0; 
-  //for(offset0=0; offset0+windowSize0<=size0; offset0+=offsetInc0){ //MOVING WINDOW
-  for(offset0=0; offset0<=25; offset0+=offsetInc0){ //MOVING WINDOW
-    //for(offset1=0; offset1+windowSize1<=size1; offset1+=offsetInc1){ //MOVING WINDOW
+      //offset2=0;
+    //for(offset1=0; offset1<2; offset1+=offsetInc1){ //MOVING WINDOW
+    for(offset1=0; offset1+windowSize1<=size1; offset1+=offsetInc1){ //MOVING WINDOW
+    double sum1 = 0, sum2=0; 
+        sum1=ssimSum;
+  for(offset0=0; offset0+windowSize0<=size0; offset0+=offsetInc0){ //MOVING WINDOW
+  //for(offset0=0; offset0<=25; offset0+=offsetInc0){ //MOVING WINDOW
       
       //offset1=331; offset2=36;
         nw++;
@@ -144,7 +146,8 @@ double matrix<dT>::SSIM_3d_windowed(matrix &other, int windowSize0, int windowSi
         //exit(0); 
         
       }
-        printf("sum%i,%i=%e,%e\n", offset1, offset2, sum, ssimSum);
+        sum2=ssimSum;
+        printf("sum%i,%i=%e,%e\n", offset1, offset2, sum2-sum1, ssimSum);
     }
     //exit(0); 
   }
@@ -235,7 +238,7 @@ double matrix<dT>::SSIM_3d_calcWindow(matrix &other, int offset0, int offset1, i
   //double ssim=luminance*luminance*luminance*luminance;
   //ssim=ssim*contrast*contrast*contrast*contrast;
   //ssim=ssim*structure*structure*structure*structure;
-  cout<<"xMean : yMean : xSigma : ySigma : xyCov : ssim = "<<xMean<<" : "<<ySum<<" : "<<xSigma<<" : "<<ySigma<<" : "<<xyCov<<" : "<<ssim<<endl;
+  //cout<<"xMean : yMean : xSigma : ySigma : xyCov : ssim = "<<xMax<<" : "<<xMin<<" : "<<xSigma<<" : "<<ySigma<<" : "<<xyCov<<" : "<<ssim<<endl;
   //cout<<"l : c : s = "<<luminance<<" : "<<contrast<<" : "<<structure<<endl; //AMG
   
   //if(isnan(ssim)) assert(0);
