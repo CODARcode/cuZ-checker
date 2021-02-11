@@ -119,8 +119,8 @@ size_t r5, size_t r4, size_t r3, size_t r2, size_t r1)
     sumErrSqr = results[r3*9];
 
     size_t order=1;
-	//float *der = (float*)malloc((r3-order*2)*(r2-order*2)*(r1-order*2)*sizeof(float));
-    //der = cu_typeTwo(ddata2, der, r3, r2, r1, order);
+	float *der1 = (float*)malloc((r3-order*2)*(r2-order*2)*(r1-order*2)*sizeof(float));
+    der1 = cu_typeTwo(ddata1, der1, r3, r2, r1, order);
     //exit(0);
 	//double *ss = (double*)malloc(100*2*sizeof(double));
     //memset(ss, 0, 100*2*sizeof(double));
@@ -424,7 +424,7 @@ size_t r5, size_t r4, size_t r3, size_t r2, size_t r1)
 		int status = 0; //0: normal , 1: abnormal
 		
 		//double der_Order1_PSNR_Metric=zc_calc_metric_der_order1_psnr_float(data1,lossyData,nDims,dim3,dim2,dim1,dim0,&status);
-		compareResult->derivativeOrder1_ssim = zc_calc_metric_der_order1_ssim_float(data1, data2, dim, r4, r3, r2, r1, &status);
+		compareResult->derivativeOrder1_ssim = zc_calc_metric_der_order1_ssim_float(data1, data2, der1, dim, r4, r3, r2, r1, &status);
 		if(status!=0)
 			compareResult->derivativeOrder1_ssim = -1; //invalid dimension settings for this metric
 	}	
