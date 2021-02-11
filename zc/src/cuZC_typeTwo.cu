@@ -10,7 +10,7 @@ __global__ void type_two(float *data, float *der, int r3, int r2, int r1, size_t
     int tidy = threadIdx.y;
     int bid = blockIdx.x;
 
-    float Data;
+    float base;
     int i, j;
     int h=bid*(16-order*2);
     double dx, dy, dz;
@@ -33,10 +33,12 @@ __global__ void type_two(float *data, float *der, int r3, int r2, int r1, size_t
             for (i=0; i<(16-order*2); i++){
                 if (tidx<(16-order*2) && tidy<(16-order*2)){
                     if ((h+i)<(r3-order*2) && (l+tidx)<(r1-order*2) && (w+tidy)<(r2-order*2)){
-                        Data = shared[i*16*16+tidy*16+tidx];
-                        dx = (shared[i*16*16+tidy*16+tidx+order*2] - Data)/2;
-                        dy = (shared[i*16*16+(tidy+order*2)*16+tidx] - Data)/2;
-                        dz = (shared[(i+order*2)*16*16+tidy*16+tidx] - Data)/2;
+                        base = shared[(i+order)*16*16+(tidy+order)*16+tidx];
+                        dx = (shared[(i+order)*16*16+(tidy+order)*16+tidx+order*2] - base)/2;
+                        base = shared[(i+order)*16*16+tidy*16+tidx+order];
+                        dy = (shared[(i+order)*16*16+(tidy+order*2)*16+tidx+order] - base)/2;
+                        base = shared[i*16*16+(tidy+order)*16+tidx+order];
+                        dz = (shared[(i+order*2)*16*16+(tidy+order)*16+tidx+order] - base)/2;
                         //if (bid==0)printf("index=%i,%e,%i,%i\n",i+2,dz,h+tidy,l+tidx);
                         //if (Data!=0.0) printf("ddata%i,%i,%i,%i,%i,%i=%e\n",w,l,bid,i,tidx,tidy,sqrt(dx*dx+dy*dy+dz*dz));
                         der[(h+i)*(r1-order*2)*(r2-order*2)+(w+tidy)*(r1-order*2)+(l+tidx)] = sqrt(dx*dx+dy*dy+dz*dz);

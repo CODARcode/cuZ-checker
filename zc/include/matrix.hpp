@@ -162,7 +162,7 @@ public:
 };
 
 //zc_derivativeMetrics.cpp:
-double zc_calc_metric_der_order1_ssim_float(float *data1, float *data2,
+double zc_calc_metric_der_order1_ssim_float(float *data1, float *data2, float *der1,
   size_t dim, size_t r4, size_t r3, size_t r2, size_t r1, int *status);
 double zc_calc_metric_der_order1_psnr_float(float *data1, float *data2,
   size_t dim, size_t r4, size_t r3, size_t r2, size_t r1, int *status);
