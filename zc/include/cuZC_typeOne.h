@@ -1,6 +1,12 @@
 #ifndef CUZC_TYPEONE_H
 #define CUZC_TYPEONE_H
 
+#include <cuda_runtime.h>
+
+// Utilities and system includes
+#include <helper_cuda.h>  // helper function CUDA error checking and initialization
+#include <helper_functions.h>  // helper for shared functions common to CUDA Samples
+
 __device__
 void reduction(double sum1, double sum2,
         double minDiff, double maxDiff, double sumDiff, double sumOfDiffSquare, 

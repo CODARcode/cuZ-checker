@@ -100,12 +100,18 @@ double *cu_typeOne(float *ddata1, float *ddata2, double *ddiff, double *absErrPD
     cudaMemcpy(dresults, results, rsize, cudaMemcpyHostToDevice); 
 
     timer_GPU.StartCounter();
-    dim3 dimBlock(32, 8);
+    void *kernelArgs[] = {
+        (void *)&ddata1, (void *)&ddata2, (void *)&ddiff, (void *)&dresults, 
+        (void *)&r3, (void *)&r2, (void *)&r1, (void *)&ne,
+    };
+    dim3 dimBlock(32, 10);
     dim3 dimGrid(r3, 1);
-    type_one<<<dimGrid, dimBlock>>>(ddata1, ddata2, ddiff, dresults, r3, r2, r1, ne);
+    //type_one<<<dimGrid, dimBlock>>>(ddata1, ddata2, ddiff, dresults, r3, r2, r1, ne);
+    checkCudaErrors(cudaLaunchCooperativeKernel((void*)type_one,
+                                                dimGrid, dimBlock, kernelArgs));
 
-    dim3 dimBlock2(32, 10);
-    gridReduction<<<1, dimBlock2>>>(dresults, r3);
+    //dim3 dimBlock2(32, 10);
+    //gridReduction<<<1, dimBlock2>>>(dresults, r3);
 
     cudaMemcpy(results, dresults, rsize, cudaMemcpyDeviceToHost); 
     double x=0;
