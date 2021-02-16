@@ -16,6 +16,8 @@ set (LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 SET(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -Xcompiler=-Wall")
 
 include_directories (${CMAKE_CURRENT_SOURCE_DIR}/zc/include)
+#include_directories (${CUDA_TOOLKIT_ROOT_DIR}/samples/common/inc)
+include_directories (/usr/local/cuda/samples/common/inc)
 
 if (NOT DEFINED CMAKE_CUDA_STANDARD)
     set(CMAKE_CUDA_STANDARD 11)

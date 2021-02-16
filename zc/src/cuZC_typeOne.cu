@@ -4,12 +4,16 @@
 #include "cuZC_typeOne.h"
 #include "matrix.hpp"
 
+#include <cooperative_groups.h>
+
+namespace cg = cooperative_groups;
+
 __device__
 void reduction(double sum1, double sum2,
         double minDiff, double maxDiff, double sumDiff, double sumOfDiffSquare, 
         double minErr, double maxErr, double sumErr, double sumErrSqr, double *results){
 
-    static __shared__ double shared[32*10];
+    static __shared__ double shared[10*10];
 
     int lane = threadIdx.x;
     int wid = threadIdx.y;
@@ -31,15 +35,15 @@ void reduction(double sum1, double sum2,
 
     if (lane==0){
         shared[wid] = minDiff;
-        shared[32+wid] = maxDiff;
-        shared[32*2+wid] = minErr;
-        shared[32*3+wid] = maxErr;
-        shared[32*4+wid] = sum1;
-        shared[32*5+wid] = sum2;
-        shared[32*6+wid] = sumDiff;
-        shared[32*7+wid] = sumOfDiffSquare;
-        shared[32*8+wid] = sumErr;
-        shared[32*9+wid] = sumErrSqr;
+        shared[blockDim.y+wid] = maxDiff;
+        shared[blockDim.y*2+wid] = minErr;
+        shared[blockDim.y*3+wid] = maxErr;
+        shared[blockDim.y*4+wid] = sum1;
+        shared[blockDim.y*5+wid] = sum2;
+        shared[blockDim.y*6+wid] = sumDiff;
+        shared[blockDim.y*7+wid] = sumOfDiffSquare;
+        shared[blockDim.y*8+wid] = sumErr;
+        shared[blockDim.y*9+wid] = sumErrSqr;
     }
 
     __syncthreads();                  
@@ -49,20 +53,20 @@ void reduction(double sum1, double sum2,
     if (wid==0){
         if (threadIdx.x < blockDim.y){
             minDiff = shared[lane];
-            maxDiff = shared[32+lane];
-            minErr = shared[32*2+lane];
-            maxErr = shared[32*3+lane];
-            sum1 = shared[32*4+lane];
-            sum2 = shared[32*5+lane];
-            sumDiff = shared[32*6+lane];
-            sumOfDiffSquare = shared[32*7+lane];
-            sumErr = shared[32*8+lane];
-            sumErrSqr = shared[32*9+lane];
+            maxDiff = shared[blockDim.y+lane];
+            minErr = shared[blockDim.y*2+lane];
+            maxErr = shared[blockDim.y*3+lane];
+            sum1 = shared[blockDim.y*4+lane];
+            sum2 = shared[blockDim.y*5+lane];
+            sumDiff = shared[blockDim.y*6+lane];
+            sumOfDiffSquare = shared[blockDim.y*7+lane];
+            sumErr = shared[blockDim.y*8+lane];
+            sumErrSqr = shared[blockDim.y*9+lane];
         }else{
             minDiff = shared[0];  
-            maxDiff = shared[32]; 
-            minErr = shared[32*2]; 
-            maxErr = shared[32*3]; 
+            maxDiff = shared[blockDim.y]; 
+            minErr = shared[blockDim.y*2]; 
+            maxErr = shared[blockDim.y*3]; 
             sum1 = 0; 
             sum2 = 0;
             sumDiff = 0; 
@@ -105,8 +109,38 @@ void reduction(double sum1, double sum2,
 
 }
 
+__device__
+void gridReduction_cg(double *results) 
+{
+    int tidx = threadIdx.x;
+    int tidy = threadIdx.y;
+    int bid = blockIdx.x;
+
+    if (bid==0){
+        double data = results[tidy*gridDim.x+tidx];
+
+        for (int i=(tidx+blockDim.x); i<gridDim.x; i+=blockDim.x){
+            if (tidy<2) data = min(data, results[tidy*gridDim.x+i]);
+            else if (tidy<4) data = max(data, results[tidy*gridDim.x+i]);
+            else data += results[tidy*gridDim.x+i];
+        }
+        __syncthreads();                  
+
+        for (int offset = warpSize/2; offset > 0; offset /= 2) 
+        {
+            if (tidy<2) data = min(data, __shfl_xor_sync(FULL_MASK, data, offset));
+            else if (tidy<4) data = max(data, __shfl_xor_sync(FULL_MASK, data, offset));
+            else data += __shfl_down_sync(FULL_MASK, data, offset);
+        }
+
+        if (tidx==0) results[tidy*gridDim.x] = data;
+    }
+}
+
 __global__ void type_one(float *data1, float *data2, double *diff, double *results, int r3, int r2, int r1, size_t ne) 
 {
+    cg::grid_group grid = cg::this_grid();
+
     int tidx = threadIdx.x;
     int tidy = threadIdx.y;
     int bid = blockIdx.x;
@@ -150,6 +184,9 @@ __global__ void type_one(float *data1, float *data2, double *diff, double *resul
 
     reduction(sum1, sum2, minDiff, maxDiff, sumDiff, sumOfDiffSquare, minErr, maxErr, sumErr, sumErrSqr, results);
 
+    cg::sync(grid);
+
+    gridReduction_cg(results);
 //if (tid == 0)printf("ydata%i,%i=%e\n",Offsetx,Offsety, result);
 //    if (tid==0) results[bid] = result;
     
@@ -166,6 +203,7 @@ __global__ void gridReduction(double *results, int r3)
         else if (tidy<4) data = max(data, results[tidy*r3+i]);
         else data += results[tidy*r3+i];
     }
+    __syncthreads();                  
 
     for (int offset = warpSize/2; offset > 0; offset /= 2) 
     {
