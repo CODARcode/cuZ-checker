@@ -146,7 +146,7 @@ size_t r5, size_t r4, size_t r3, size_t r2, size_t r1)
 
     size_t order=1;
 	float *der1 = (float*)malloc((r3-order*2)*(r2-order*2)*(r1-order*2)*sizeof(float));
-    cu_typeTwo(ddata1, der1, r3, r2, r1, avgDiff, order);
+    float *autocorr = cu_typeTwo(ddata1, der1, r3, r2, r1, avgDiff, order);
     //exit(0);
 	//double *ss = (double*)malloc(100*2*sizeof(double));
     //memset(ss, 0, 100*2*sizeof(double));

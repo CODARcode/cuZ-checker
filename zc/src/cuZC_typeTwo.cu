@@ -3,9 +3,13 @@
 #include "cuZC_ssim.h"
 #include "cuZC_typeTwo.h"
 #include "matrix.hpp"
+#include <cooperative_groups.h>
+
+namespace cg = cooperative_groups;
 
 __global__ void type_two(float *data, float *der, float *autocor, int r3, int r2, int r1, float avg, size_t order) 
 {
+    cg::grid_group grid = cg::this_grid();
     int tidx = threadIdx.x;
     int tidy = threadIdx.y;
 
@@ -47,7 +51,8 @@ __global__ void type_two(float *data, float *der, float *autocor, int r3, int r2
                         der[(h+i)*(r1-order*2)*(r2-order*2)+(w+tidy)*(r1-order*2)+(l+tidx)] = sqrt(dx*dx+dy*dy+dz*dz);
                         //if (der[(w+i)*(r1-order*2)*(r2-order*2)+(h+tidy)*(r1-order*2)+(l+tidx)]!=0.0) printf("ddata%i=%e\n",(w+i)*(r1-order*2)*(r2-order*2)+(h+tidy)*(r1-order*2)+(l+tidx),der[(w+i)*(r1-order*2)*(r2-order*2)+(h+tidy)*(r1-order*2)+(l+tidx)]);
 
-                        mask = __ballot_sync(FULL_MASK, 1);
+                        //mask = __ballot_sync(FULL_MASK, 1);
+                        mask = __activemask();
                         base = bdata[i*16*16+tidy*16+tidx];
 
                         for (j=1; j<=order*2; j++){
@@ -66,7 +71,8 @@ __global__ void type_two(float *data, float *der, float *autocor, int r3, int r2
                     if (tidx < (16-order*2) && (w+tidx)<(r2-order*2))
                     {
                         sum = cor[blockDim.y*tidy+tidx];
-                        mask = __ballot_sync(FULL_MASK, 1);
+                        //mask = __ballot_sync(FULL_MASK, 1);
+                        mask = __activemask();
                     } else sum = 0;
                     for (int offset = warpSize/2; offset > 0; offset /= 2) 
                         sum += __shfl_down_sync(mask, sum, offset);
@@ -75,6 +81,21 @@ __global__ void type_two(float *data, float *der, float *autocor, int r3, int r2
                 }
                 __syncthreads();                  
             }
+        }
+    }
+    cg::sync(grid);
+
+    if (blockIdx.x==0){
+        if (tidy<order*2){
+            sum = autocor[gridDim.x*tidy+tidx];
+
+            for (i=(tidx+blockDim.x); i<gridDim.x; i+=blockDim.x)
+                sum += autocor[gridDim.x*tidy+i];
+
+            for (int offset = warpSize/2; offset > 0; offset /= 2) 
+                sum += __shfl_down_sync(FULL_MASK, sum, offset);
+
+            if (tidx==0) autocor[tidy*gridDim.x] = sum;
         }
     }
 }

@@ -132,10 +132,12 @@ double *cu_typeOne(float *ddata1, float *ddata2, double *ddiff, double *absErrPD
 
 float *cu_typeTwo(float *ddata, float *der, size_t r3, size_t r2, size_t r1, double avg, size_t order){
 
+    printf("test1\n");
     float *dder, *autocor, *dautocor;
     const int dsize = (r3-order*2) * (r2-order*2) * (r1-order*2) * sizeof(float);
     int gridsize = (r3-order*2)/(16-order*2)+((r3-order*2)%(16-order*2)?1:0);
     int corsize = gridsize * order * 2 * sizeof(float);
+    printf("test1\n");
 
     cudaMalloc((void**)&dder, dsize); 
     cudaMemcpy(dder, der, dsize, cudaMemcpyHostToDevice); 
@@ -143,23 +145,28 @@ float *cu_typeTwo(float *ddata, float *der, size_t r3, size_t r2, size_t r1, dou
     memset(autocor, 0, corsize);
     cudaMalloc((void**)&dautocor, corsize); 
     cudaMemcpy(dautocor, autocor, corsize, cudaMemcpyHostToDevice); 
+    printf("test3\n");
 
     timer_GPU.StartCounter();
     dim3 dimBlock(16, 16);
     dim3 dimGrid(gridsize, 1);
     const int sMemsize = (16 * dimBlock.x * dimBlock.y + dimBlock.y * order * 2) * sizeof(double);
-    //type_two<<<dimGrid, dimBlock>>>(ddata, dder, r3, r2, r1, order);
+    //type_two<<<dimGrid, dimBlock, sMemsize>>>(ddata, dder, dautocor, r3, r2, r1, avg, order);
     void *kernelArgs[] = {
         (void *)&ddata, (void *)&dder, (void *)&dautocor,
         (void *)&r3, (void *)&r2, (void *)&r1, (void *)&avg, (void *)&order,
     };
+    printf("test4\n");
     checkCudaErrors(cudaLaunchCooperativeKernel((void*)type_two,
                                                 dimGrid, dimBlock, kernelArgs, sMemsize));
 
+    printf("test5\n");
     cudaMemcpy(der, dder, dsize, cudaMemcpyDeviceToHost); 
     cudaMemcpy(autocor, dautocor, corsize, cudaMemcpyDeviceToHost); 
+    printf("test5\n");
 
     printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
+    //printf("ddata=%e, %e\n", autocor[0], autocor[gridsize]);
     //for (int i=0;i<(r3-4)*(r2-4)*(r1-4);i++){
     //    if (der[i]!=0.0) printf("ddata%i=%e\n",i,der[i]);
     //}
