@@ -13,7 +13,9 @@ void reduction(double sum1, double sum2,
         double minDiff, double maxDiff, double sumDiff, double sumOfDiffSquare, 
         double minErr, double maxErr, double sumErr, double sumErrSqr, double *results){
 
-    static __shared__ double shared[10*10];
+    //static __shared__ double shared[10*10];
+    //dynamic shared mem
+    extern __shared__ double shared[];
 
     int lane = threadIdx.x;
     int wid = threadIdx.y;

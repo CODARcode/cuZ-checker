@@ -2,12 +2,11 @@
 #define CUZC_SSIM_H
 
 #include <stdio.h>
+#include "cuZC_typeOne.h"
  
 const int N = 16; 
 const int blocksize = 16; 
 
-#define FULL_MASK 0xffffffff
- 
 __inline__ __device__
 int warpReduceSum(int val) {
 

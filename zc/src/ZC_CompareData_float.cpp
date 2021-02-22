@@ -107,7 +107,6 @@ size_t r5, size_t r4, size_t r3, size_t r2, size_t r1)
 
     results = cu_typeOne(ddata1, ddata2, ddiff, absErrPDF, results, r3, r2, r1, numOfElem);
     printf("GPU:%e,%e,%e,%e,%e,%e,%e,%e,%e,%e\n", results[r3*4], results[r3*5], results[0], results[r3*2], results[r3*6], results[r3*7], results[r3], results[r3*3], results[r3*8], results[r3*9]);
-    exit(0);
     sum1 = results[r3*4];
     sum2 = results[r3*5];
     minDiff = results[0];
@@ -119,15 +118,6 @@ size_t r5, size_t r4, size_t r3, size_t r2, size_t r1)
     sumErr = results[r3*8];
     sumErrSqr = results[r3*9];
 
-    size_t order=1;
-	float *der1 = (float*)malloc((r3-order*2)*(r2-order*2)*(r1-order*2)*sizeof(float));
-    der1 = cu_typeTwo(ddata1, der1, r3, r2, r1, order);
-    //exit(0);
-	//double *ss = (double*)malloc(100*2*sizeof(double));
-    //memset(ss, 0, 100*2*sizeof(double));
-    //ss = cu_typeThree(ddata1, ddata2, ss, r3, r2, r1, ssimsize, ssimshift);
-    //exit(0);
-	
 	ZC_DataProperty* property = compareResult->property;
 	
 	double zeromean_variance = property->zeromean_variance;
@@ -153,6 +143,15 @@ size_t r5, size_t r4, size_t r3, size_t r2, size_t r1)
 	}
 	
 	int index;
+
+    size_t order=1;
+	float *der1 = (float*)malloc((r3-order*2)*(r2-order*2)*(r1-order*2)*sizeof(float));
+    cu_typeTwo(ddata1, der1, r3, r2, r1, avgDiff, order);
+    //exit(0);
+	//double *ss = (double*)malloc(100*2*sizeof(double));
+    //memset(ss, 0, 100*2*sizeof(double));
+    //ss = cu_typeThree(ddata1, ddata2, ss, r3, r2, r1, ssimsize, ssimshift);
+    //exit(0);
 	
 	if (minAbsErrFlag)
 		compareResult->minAbsErr = minErr;
