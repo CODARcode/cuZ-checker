@@ -3,9 +3,13 @@
 #include "cuZC_ssim.h"
 #include "cuZC_typeTwo.h"
 #include "matrix.hpp"
+#include <cooperative_groups.h>
+
+namespace cg = cooperative_groups;
 
 __global__ void type_two(float *data, float *der, float *autocor, int r3, int r2, int r1, float avg, size_t order) 
 {
+    cg::grid_group grid = cg::this_grid();
     int tidx = threadIdx.x;
     int tidy = threadIdx.y;
 
@@ -75,6 +79,21 @@ __global__ void type_two(float *data, float *der, float *autocor, int r3, int r2
                 }
                 __syncthreads();                  
             }
+        }
+    }
+    cg::sync(grid);
+
+    if (blockIdx.x==0){
+        if (tidy<order*2){
+            sum = autocor[gridDim.x*tidy+tidx];
+
+            for (i=(tidx+blockDim.x); i<gridDim.x; i+=blockDim.x)
+                sum += autocor[gridDim.x*tidy+i];
+
+            for (int offset = warpSize/2; offset > 0; offset /= 2) 
+                sum += __shfl_down_sync(FULL_MASK, sum, offset);
+
+            if (tidx==0) autocor[tidy*gridDim.x] = sum;
         }
     }
 }
