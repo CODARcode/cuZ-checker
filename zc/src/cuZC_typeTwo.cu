@@ -51,7 +51,8 @@ __global__ void type_two(float *data, float *der, float *autocor, int r3, int r2
                         der[(h+i)*(r1-order*2)*(r2-order*2)+(w+tidy)*(r1-order*2)+(l+tidx)] = sqrt(dx*dx+dy*dy+dz*dz);
                         //if (der[(w+i)*(r1-order*2)*(r2-order*2)+(h+tidy)*(r1-order*2)+(l+tidx)]!=0.0) printf("ddata%i=%e\n",(w+i)*(r1-order*2)*(r2-order*2)+(h+tidy)*(r1-order*2)+(l+tidx),der[(w+i)*(r1-order*2)*(r2-order*2)+(h+tidy)*(r1-order*2)+(l+tidx)]);
 
-                        mask = __ballot_sync(FULL_MASK, 1);
+                        //mask = __ballot_sync(FULL_MASK, 1);
+                        mask = __activemask();
                         base = bdata[i*16*16+tidy*16+tidx];
 
                         for (j=1; j<=order*2; j++){
@@ -70,7 +71,8 @@ __global__ void type_two(float *data, float *der, float *autocor, int r3, int r2
                     if (tidx < (16-order*2) && (w+tidx)<(r2-order*2))
                     {
                         sum = cor[blockDim.y*tidy+tidx];
-                        mask = __ballot_sync(FULL_MASK, 1);
+                        //mask = __ballot_sync(FULL_MASK, 1);
+                        mask = __activemask();
                     } else sum = 0;
                     for (int offset = warpSize/2; offset > 0; offset /= 2) 
                         sum += __shfl_down_sync(mask, sum, offset);
