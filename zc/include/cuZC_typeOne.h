@@ -7,6 +7,8 @@
 #include <helper_cuda.h>  // helper function CUDA error checking and initialization
 #include <helper_functions.h>  // helper for shared functions common to CUDA Samples
 
+#define FULL_MASK 0xffffffff
+
 __device__
 void reduction(double sum1, double sum2,
         double minDiff, double maxDiff, double sumDiff, double sumOfDiffSquare, 
