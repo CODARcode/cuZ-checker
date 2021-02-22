@@ -106,9 +106,11 @@ double *cu_typeOne(float *ddata1, float *ddata2, double *ddiff, double *absErrPD
     };
     dim3 dimBlock(32, 10);
     dim3 dimGrid(r3, 1);
+    const int sMemsize = 10 * dimBlock.y * sizeof(double);
+    printf("test:%i,%i\n",sMemsize, dimBlock.y);
     //type_one<<<dimGrid, dimBlock>>>(ddata1, ddata2, ddiff, dresults, r3, r2, r1, ne);
     checkCudaErrors(cudaLaunchCooperativeKernel((void*)type_one,
-                                                dimGrid, dimBlock, kernelArgs));
+                                                dimGrid, dimBlock, kernelArgs, sMemsize));
 
     //dim3 dimBlock2(32, 10);
     //gridReduction<<<1, dimBlock2>>>(dresults, r3);
