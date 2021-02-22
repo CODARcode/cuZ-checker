@@ -28,7 +28,8 @@ __global__ void type_three(float *data1, float *data2, double *results, int r3, 
     int wsize = (r1-ssimSize+ssimShift)/wstride + ((r1-ssimSize+ssimShift)%wstride?1:0);
     
     //static __shared__ float shared[9*xNum*(yNum*ssimSize+blockDim.y)];
-    static __shared__ float shared[9*26*(2*7+8)];
+    //static __shared__ float shared[9*26*(2*7+8)];
+    extern __shared__ float shared[];
 
     for (int w=0; w<wsize*wstride; w+=wstride){
         if ((w+blockDim.x)>r1) xNum = (r1-w-ssimSize)/ssimShift+1;

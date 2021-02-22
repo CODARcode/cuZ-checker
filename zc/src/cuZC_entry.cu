@@ -216,14 +216,15 @@ double cu_typeThree(float *data1, float *data2, int r3, int r2, int r1, int ssim
     timer_GPU.StartCounter();
     dim3 dimBlock(32, 8);
     dim3 dimGrid(blksize, 1);
-    type_three<<<dimGrid, dimBlock>>>(ddata1, ddata2, dresults, r3, r2, r1, ssimSize, ssimShift, yNum);
+    const int sMemsize = 9*((32-ssimSize)/ssimShift+1)*(yNum*ssimSize+dimBlock.y) * sizeof(float);
+    type_three<<<dimGrid, dimBlock, sMemsize>>>(ddata1, ddata2, dresults, r3, r2, r1, ssimSize, ssimShift, yNum);
 
     cudaMemcpy(results, dresults, rsize, cudaMemcpyDeviceToHost); 
     double x=0, y=0;
     printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
     for (int i=0; i<r1*r2*((r3-ssimSize+1)/ssimShift); i++){
         if (i%r1==0) {
-printf("results%i=%e\n",i/r1-1,x);
+//printf("results%i=%e\n",i/r1-1,x);
 x=0;
 
         }
