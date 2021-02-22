@@ -166,7 +166,7 @@ float *cu_typeTwo(float *ddata, float *der, size_t r3, size_t r2, size_t r1, dou
     printf("test5\n");
 
     printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
-    //printf("ddata=%e, %e\n", autocor[0], autocor[gridsize]);
+    printf("ddata=%e, %e\n", autocor[0], autocor[1]);
     //for (int i=0;i<(r3-4)*(r2-4)*(r1-4);i++){
     //    if (der[i]!=0.0) printf("ddata%i=%e\n",i,der[i]);
     //}

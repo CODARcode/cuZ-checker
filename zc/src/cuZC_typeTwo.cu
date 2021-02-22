@@ -95,7 +95,7 @@ __global__ void type_two(float *data, float *der, float *autocor, int r3, int r2
             for (int offset = warpSize/2; offset > 0; offset /= 2) 
                 sum += __shfl_down_sync(FULL_MASK, sum, offset);
 
-            if (tidx==0) autocor[tidy*gridDim.x] = sum;
+            if (tidx==0) autocor[tidy] = sum;
         }
     }
 }
