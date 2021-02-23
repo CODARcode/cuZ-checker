@@ -199,7 +199,7 @@ double cu_typeThree(float *data1, float *data2, int r3, int r2, int r1, int ssim
     //}
     int yNum = (8-ssimSize)/ssimShift+1;
     int yTotal = (r2-ssimSize)/ssimShift+1;
-    int blksize = yTotal/yNum + (yTotal%yNum?1:0);
+    int gridsize = yTotal/yNum + (yTotal%yNum?1:0);
 
     const int csize = r3 * r2 * r1 * sizeof(float);
 
@@ -215,26 +215,34 @@ double cu_typeThree(float *data1, float *data2, int r3, int r2, int r1, int ssim
 
     timer_GPU.StartCounter();
     dim3 dimBlock(32, 8);
-    dim3 dimGrid(blksize, 1);
+    dim3 dimGrid(gridsize, 1);
     const int sMemsize = 9*((32-ssimSize)/ssimShift+1)*(yNum*ssimSize+dimBlock.y) * sizeof(float);
     type_three<<<dimGrid, dimBlock, sMemsize>>>(ddata1, ddata2, dresults, r3, r2, r1, ssimSize, ssimShift, yNum);
+    //void *kernelArgs[] = {
+    //    (void *)&ddata1, (void *)&ddata2, (void *)&dresults, 
+    //    (void *)&r3, (void *)&r2, (void *)&r1, (void *)&ssimSize, (void *)&ssimShift, (void *)&yNum,
+    //};
+    //checkCudaErrors(cudaLaunchCooperativeKernel((void*)type_three,
+    //                                            dimGrid, dimBlock, kernelArgs, sMemsize));
+    dim3 dimBlock2(32, 1);
+    gridR_typeThree<<<1, dimBlock2>>>(dresults, r1*r2*((r3-ssimSize+1)/ssimShift));
 
     cudaMemcpy(results, dresults, rsize, cudaMemcpyDeviceToHost); 
     double x=0, y=0;
     printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
-    for (int i=0; i<r1*r2*((r3-ssimSize+1)/ssimShift); i++){
-        if (i%r1==0) {
-//printf("results%i=%e\n",i/r1-1,x);
-x=0;
+    //for (int i=0; i<r1*r2*((r3-ssimSize+1)/ssimShift); i++){
+    //    if (i%r1==0) {
+//pr//intf("results%i=%e\n",i/r1-1,x);
+x=0;//
 
-        }
-        //if (i%r1==0) printf("delimiter%i\n",(i/r1));
-        x += results[i];
-        y += results[i];
-        //printf("results%i=%e\n",i,results[i]);
+    //    }
+    //    //if (i%r1==0) printf("delimiter%i\n",(i/r1));
+    //    x += results[i];
+    //    y += results[i];
+    //    //printf("results%i=%e\n",i,results[i]);
 
-    }
-    printf("results=%e\n",y);
+    //}
+    printf("results=%e\n",results[0]);
 
     cudaFree(dresults);
 
