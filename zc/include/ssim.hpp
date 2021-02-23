@@ -147,14 +147,13 @@ double matrix<dT>::SSIM_3d_windowed(matrix &other, int windowSize0, int windowSi
         
       }
         sum2=ssimSum;
-        printf("sum%i,%i=%e,%e\n", offset1, offset2, sum2-sum1, ssimSum);
+        //printf("sum%i,%i=%e,%e\n", offset1, offset2, sum2-sum1, ssimSum);
     }
     //exit(0); 
   }
   t = clock() - t;
   double time_taken = ((double)t)/CLOCKS_PER_SEC;
   printf("derivative ssim took %f seconds to execute \n", time_taken);
-  exit(0); 
 
   printf("Sum%i=%e\n", offset0, ssimSum);
   //cout<<"# of windows = "<<nw<<endl;

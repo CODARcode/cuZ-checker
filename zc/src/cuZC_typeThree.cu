@@ -3,9 +3,13 @@
 #include "cuZC_ssim.h"
 #include "cuZC_typeThree.h"
 #include "matrix.hpp"
+#include <cooperative_groups.h>
+
+namespace cg = cooperative_groups;
 
 __global__ void type_three(float *data1, float *data2, double *results, int r3, int r2, int r1, int ssimSize, int ssimShift, int yNum) 
 {
+    //cg::grid_group grid = cg::this_grid();
     float xMin;  
     float xMax; 
     float yMin; 
@@ -28,7 +32,8 @@ __global__ void type_three(float *data1, float *data2, double *results, int r3, 
     int wsize = (r1-ssimSize+ssimShift)/wstride + ((r1-ssimSize+ssimShift)%wstride?1:0);
     
     //static __shared__ float shared[9*xNum*(yNum*ssimSize+blockDim.y)];
-    static __shared__ float shared[9*26*(2*7+8)];
+    //static __shared__ float shared[9*26*(2*7+8)];
+    extern __shared__ float shared[];
 
     for (int w=0; w<wsize*wstride; w+=wstride){
         if ((w+blockDim.x)>r1) xNum = (r1-w-ssimSize)/ssimShift+1;
@@ -175,4 +180,21 @@ __global__ void type_three(float *data1, float *data2, double *results, int r3, 
         }
 
     }
+    //cg::sync(grid);
+}
+
+__global__ void gridR_typeThree(double *results, int size) 
+{
+    int tidx = threadIdx.x;
+    double data = results[tidx];
+
+    for (int i=(tidx+blockDim.x); i<size; i+=blockDim.x)
+        data += results[i];
+    __syncthreads();                  
+
+    for (int offset = warpSize/2; offset > 0; offset /= 2) 
+        data += __shfl_down_sync(FULL_MASK, data, offset);
+
+    if (tidx==0) results[0] = data;
+        
 }
