@@ -117,7 +117,7 @@ double *cu_typeOne(float *ddata1, float *ddata2, double *ddiff, double *absErrPD
 
     cudaMemcpy(results, dresults, rsize, cudaMemcpyDeviceToHost); 
     double x=0;
-    printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
+    printf("GPU type one time: %f ms\n", timer_GPU.GetCounter());
     //for (int i=0; i<r3; i++){
     //    x += results[i];
     //    printf("results%i=%e\n",i,x);
@@ -165,7 +165,7 @@ float *cu_typeTwo(float *ddata, float *der, size_t r3, size_t r2, size_t r1, dou
     cudaMemcpy(autocor, dautocor, corsize, cudaMemcpyDeviceToHost); 
     printf("test5\n");
 
-    printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
+    printf("GPU type two time: %f ms\n", timer_GPU.GetCounter());
     printf("ddata=%e, %e\n", autocor[0], autocor[1]);
     //for (int i=0;i<(r3-4)*(r2-4)*(r1-4);i++){
     //    if (der[i]!=0.0) printf("ddata%i=%e\n",i,der[i]);
@@ -229,19 +229,7 @@ double cu_typeThree(float *data1, float *data2, int r3, int r2, int r1, int ssim
 
     cudaMemcpy(results, dresults, rsize, cudaMemcpyDeviceToHost); 
     double x=0, y=0;
-    printf("GPU timing: %f ms\n", timer_GPU.GetCounter());
-    //for (int i=0; i<r1*r2*((r3-ssimSize+1)/ssimShift); i++){
-    //    if (i%r1==0) {
-//pr//intf("results%i=%e\n",i/r1-1,x);
-x=0;//
-
-    //    }
-    //    //if (i%r1==0) printf("delimiter%i\n",(i/r1));
-    //    x += results[i];
-    //    y += results[i];
-    //    //printf("results%i=%e\n",i,results[i]);
-
-    //}
+    printf("GPU type three time: %f ms\n", timer_GPU.GetCounter());
     printf("results=%e\n",results[0]);
 
     cudaFree(dresults);

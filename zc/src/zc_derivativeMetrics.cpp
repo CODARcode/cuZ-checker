@@ -88,7 +88,6 @@ double zc_calc_metric_der_order1_ssim_float(float *data1, float *data2, float *d
       //cu_SSIM_3d_windowed(ssimSize,ssimSize,ssimSize,ssimShift,ssimShift,ssimShift);
       //cu_SSIM(temp1.data, temp2.data, temp1.size2, temp1.size1, temp1.size0, ssimSize, ssimShift);
       cu_typeThree(temp1.data, temp2.data, temp1.size2, temp1.size1, temp1.size0, ssimSize, ssimShift);
-      exit(0);
       break;
     case 4:
       result=temp1.SSIM_4d_windowed(temp2,ssimSize,ssimSize,ssimSize,ssimSize,ssimShift,ssimShift,ssimShift,ssimShift);
