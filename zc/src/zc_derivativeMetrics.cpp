@@ -984,7 +984,7 @@ double zc_calc_metric_der_order2_ssim_float(float *data1, float *data2,
       result=temp1.SSIM_2d_windowed(temp2,ssimSize,ssimSize,ssimShift,ssimShift);
       break;
     case 3:
-      result=temp1.SSIM_3d_windowed(temp2,ssimSize,ssimSize,ssimSize,ssimShift,ssimShift,ssimShift);
+      //result=temp1.SSIM_3d_windowed(temp2,ssimSize,ssimSize,ssimSize,ssimShift,ssimShift,ssimShift);
       break;
     case 4:
       result=temp1.SSIM_4d_windowed(temp2,ssimSize,ssimSize,ssimSize,ssimSize,ssimShift,ssimShift,ssimShift,ssimShift);
