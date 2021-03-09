@@ -164,11 +164,9 @@ size_t r5, size_t r4, size_t r3, size_t r2, size_t r1)
             autocorr[delta] = autocor[delta]/(numOfElem-delta)/cov;
     }
     cout << "test:" << cov << "," << autocorr[0] << "," << autocorr[1] << endl;
-    //exit(0);
 	//double *ss = (double*)malloc(100*2*sizeof(double));
     //memset(ss, 0, 100*2*sizeof(double));
     //ss = cu_typeThree(ddata1, ddata2, ss, r3, r2, r1, ssimsize, ssimshift);
-    //exit(0);
 	
 	if (minAbsErrFlag)
 		compareResult->minAbsErr = minErr;

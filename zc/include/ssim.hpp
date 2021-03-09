@@ -143,13 +143,11 @@ double matrix<dT>::SSIM_3d_windowed(matrix &other, int windowSize0, int windowSi
         nw++;
         ssimSum+=SSIM_3d_calcWindow(other, offset0, offset1, offset2, windowSize0, windowSize1, windowSize2);
         //sum=SSIM_3d_calcWindow(other, offset0, offset1, offset2, windowSize0, windowSize1, windowSize2);
-        //exit(0); 
         
       }
         sum2=ssimSum;
         //printf("sum%i,%i=%e,%e\n", offset1, offset2, sum2-sum1, ssimSum);
     }
-    //exit(0); 
   }
   t = clock() - t;
   double time_taken = ((double)t)/CLOCKS_PER_SEC;
@@ -180,7 +178,6 @@ double matrix<dT>::SSIM_3d_calcWindow(matrix &other, int offset0, int offset1, i
   //  printf("bdata%i=%f, %f\n",i, data[i], other.data[i]);
 
   //}
-  //exit(0);
 
   for(i2=offset2;i2<offset2+windowSize2;i2++){
     for(i1=offset1;i1<offset1+windowSize1;i1++){
@@ -209,7 +206,6 @@ double matrix<dT>::SSIM_3d_calcWindow(matrix &other, int offset0, int offset1, i
           //cout << "data" << i0<< ":"<< ySum << endl;
     }
   }
-  //exit(0);
 
   double xMean=xSum/np;
   double yMean=ySum/np;
