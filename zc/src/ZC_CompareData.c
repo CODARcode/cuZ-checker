@@ -133,9 +133,9 @@ void ZC_computeFFT_float_offline(ZC_CompareData* compareResult,float* data1, flo
 {
 	size_t fft_size = pow(2,(int)log2(numOfElem));
 	 
-	complex* fftCoeff1 = ZC_computeFFT(data1, fft_size, ZC_FLOAT);
-	complex* fftCoeff2 = ZC_computeFFT(data2, fft_size, ZC_FLOAT);
-	complex* fftCoeffRelDiff = (complex*)malloc(FFT_SIZE*sizeof(complex));
+	ZC_Complex* fftCoeff1 = ZC_computeFFT(data1, fft_size, ZC_FLOAT);
+	ZC_Complex* fftCoeff2 = ZC_computeFFT(data2, fft_size, ZC_FLOAT);
+	ZC_Complex* fftCoeffRelDiff = (ZC_Complex*)malloc(FFT_SIZE*sizeof(ZC_Complex));
 	size_t i;
 	fftCoeffRelDiff[0].Re = fabs((fftCoeff2[0].Re - fftCoeff1[0].Re)/fftCoeff1[0].Re);
 	fftCoeffRelDiff[0].Im = 0;
@@ -155,9 +155,9 @@ void ZC_computeFFT_double_offline(ZC_CompareData* compareResult, double* data1, 
 {
 	size_t fft_size = pow(2,(int)log2(numOfElem));
 	 
-	complex* fftCoeff1 = ZC_computeFFT(data1, fft_size, ZC_FLOAT);
-	complex* fftCoeff2 = ZC_computeFFT(data2, fft_size, ZC_FLOAT);
-	complex* fftCoeffRelDiff = (complex*)malloc(FFT_SIZE*sizeof(complex));
+	ZC_Complex* fftCoeff1 = ZC_computeFFT(data1, fft_size, ZC_FLOAT);
+	ZC_Complex* fftCoeff2 = ZC_computeFFT(data2, fft_size, ZC_FLOAT);
+	ZC_Complex* fftCoeffRelDiff = (ZC_Complex*)malloc(FFT_SIZE*sizeof(ZC_Complex));
 	size_t i;
 	fftCoeffRelDiff[0].Re = fabs((fftCoeff2[0].Re - fftCoeff1[0].Re)/fftCoeff1[0].Re);
 	fftCoeffRelDiff[0].Im = 0;
@@ -912,6 +912,7 @@ const float lower_bound, const float upper_bound)
 	//plotDecSliceMode = DECVIS_ERROR_LINEAR_APPROX;
 	if(plotDecSliceMode == DECVIS_ERROR_SELECT_NEAREST)
 	{
+		printf("Using DECVIS_ERROR_SELECT_NEAREST\n");
 		int i = 0;
 		int targetIndex = 0;
 		
@@ -928,6 +929,7 @@ const float lower_bound, const float upper_bound)
 	}
 	else if(plotDecSliceMode == DECVIS_ERROR_LINEAR_APPROX)
 	{
+		printf("Using DECVIS_ERROR_LINEAR_APPROX\n");
 		int i = 0;
 		int lower = 0, upper = 0;
 		for(i=0;i<nbPoints;i++)
@@ -965,6 +967,7 @@ const float lower_bound, const float upper_bound)
 #ifdef HAVE_LIBPRESSIOOPT	
 	else if(plotDecSliceMode == DECVIS_ERROR_LIBPRESSIO_OPT)
 	{	
+		printf("Using DECVIS_ERROR_LIBPRESSIO_OPT\n");
 		ZC_evaluation_result* eresult = search_cmpr_setting_with_CR(compressorID, data, dataType, r5, r4, r3, r2, r1, targetCR, lower_bound, upper_bound);	
 		printf("error_setting: %f, compression ratio: %f\n", eresult->error_bound, eresult->metric);
 		result = eresult->error_bound;

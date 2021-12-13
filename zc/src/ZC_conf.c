@@ -283,40 +283,41 @@ int ZC_ReadConf() {
 	//if(opendir(ZC_workspaceDir)==NULL)
 	//	mkdir(ZC_workspaceDir,0775);
 	
-	minValueFlag= (int)iniparser_getint(ini, "DATA:minValue", 0);
-	maxValueFlag= (int)iniparser_getint(ini, "DATA:maxValue", 0);
-	valueRangeFlag= (int)iniparser_getint(ini, "DATA:valueRange", 0);
-	avgValueFlag= (int)iniparser_getint(ini, "DATA:avgValue", 0);
-	entropyFlag= (int)iniparser_getint(ini, "DATA:entropy", 0);
+	minValueFlag= (int)iniparser_getint(ini, "DATA:minValue", 1);
+	maxValueFlag= (int)iniparser_getint(ini, "DATA:maxValue", 1);
+	valueRangeFlag= (int)iniparser_getint(ini, "DATA:valueRange", 1);
+	avgValueFlag= (int)iniparser_getint(ini, "DATA:avgValue", 1);
+	entropyFlag= (int)iniparser_getint(ini, "DATA:entropy", 1);
+	entropyFloatpointFlag = (int)iniparser_getint(ini, "DATA:entropyFloatpoint", 0);
 	autocorrFlag= (int)iniparser_getint(ini, "DATA:autocorr", 0);
 	autocorr3DFlag = (int)iniparser_getint(ini, "DATA:autocorr3D", 0);
 	fftFlag= (int)iniparser_getint(ini, "DATA:fft", 0);
 	lapFlag= (int)iniparser_getint(ini, "DATA:lap", 0);
 	
-	compressTimeFlag = (int)iniparser_getint(ini, "COMPARE:compressTime", 0);
-	decompressTimeFlag = (int)iniparser_getint(ini, "COMPARE:decompressTime", 0);
-	compressSizeFlag = (int)iniparser_getint(ini, "COMPARE:compressSize", 0);
+	compressTimeFlag = (int)iniparser_getint(ini, "COMPARE:compressTime", 1);
+	decompressTimeFlag = (int)iniparser_getint(ini, "COMPARE:decompressTime", 1);
+	compressSizeFlag = (int)iniparser_getint(ini, "COMPARE:compressSize", 1);
 	
-	minAbsErrFlag = (int)iniparser_getint(ini, "COMPARE:minAbsErr", 0);
-	avgAbsErrFlag = (int)iniparser_getint(ini, "COMPARE:avgAbsErr", 0);
-	maxAbsErrFlag = (int)iniparser_getint(ini, "COMPARE:maxAbsErr", 0);
+	minAbsErrFlag = (int)iniparser_getint(ini, "COMPARE:minAbsErr", 1);
+	avgAbsErrFlag = (int)iniparser_getint(ini, "COMPARE:avgAbsErr", 1);
+	maxAbsErrFlag = (int)iniparser_getint(ini, "COMPARE:maxAbsErr", 1);
 	errAutoCorrFlag = (int)iniparser_getint(ini, "COMPARE:errAutoCorr", 0);
 	errAutoCorr3DFlag = (int)iniparser_getint(ini, "COMPARE:errAutoCorr3D", 0);
 	absErrPDFFlag = (int)iniparser_getint(ini, "COMPARE:absErrPDF", 0);
 	pwrErrPDFFlag = (int)iniparser_getint(ini, "COMPARE:pwrErrPDF", 0);
 	
-	minRelErrFlag = (int)iniparser_getint(ini, "COMPARE:minRelErr", 0);
-	avgRelErrFlag = (int)iniparser_getint(ini, "COMPARE:avgRelErr", 0);
-	maxRelErrFlag = (int)iniparser_getint(ini, "COMPARE:maxRelErr", 0);
+	minRelErrFlag = (int)iniparser_getint(ini, "COMPARE:minRelErr", 1);
+	avgRelErrFlag = (int)iniparser_getint(ini, "COMPARE:avgRelErr", 1);
+	maxRelErrFlag = (int)iniparser_getint(ini, "COMPARE:maxRelErr", 1);
 
-	rmseFlag = (int)iniparser_getint(ini, "COMPARE:rmse", 0);
-	nrmseFlag = (int)iniparser_getint(ini, "COMPARE:nrmse", 0);
-	snrFlag = (int)iniparser_getint(ini, "COMPARE:snr", 0);
-	psnrFlag = (int)iniparser_getint(ini, "COMPARE:psnr", 0);
+	rmseFlag = (int)iniparser_getint(ini, "COMPARE:rmse", 1);
+	nrmseFlag = (int)iniparser_getint(ini, "COMPARE:nrmse", 1);
+	snrFlag = (int)iniparser_getint(ini, "COMPARE:snr", 1);
+	psnrFlag = (int)iniparser_getint(ini, "COMPARE:psnr", 1);
 
 	valErrCorrFlag = (int)iniparser_getint(ini, "COMPARE:valErrCorr", 0);
 
-	pearsonCorrFlag = (int)iniparser_getint(ini, "COMPARE:pearsonCorr", 0);
+	pearsonCorrFlag = (int)iniparser_getint(ini, "COMPARE:pearsonCorr", 1);
 	
 	KS_testFlag = (int)iniparser_getint(ini, "COMPARE:KS_test", 0);
 	SSIMFlag = (int)iniparser_getint(ini, "COMPARE:ssim", 0);
@@ -345,7 +346,18 @@ int ZC_ReadConf() {
 		char* p = NULL;
 
 		char buffer[100];		
-		plotDecSliceMode = iniparser_getint(ini, "PLOT:plotDecSliceMode", DECVIS_ERROR_LINEAR_APPROX);
+		char* sliceMode = iniparser_getstring(ini, "PLOT:plotDecSliceMode", "DECVIS_ERROR_LINEAR_APPROX");
+		
+		if(strcmp(sliceMode, "DECVIS_ERROR_SELECT_NEAREST")==0)
+			plotDecSliceMode = DECVIS_ERROR_SELECT_NEAREST;
+		else if(strcmp(sliceMode, "DECVIS_ERROR_LINEAR_APPROX")==0)
+			plotDecSliceMode = DECVIS_ERROR_LINEAR_APPROX;
+		else if(strcmp(sliceMode, "DECVIS_ERROR_LIBPRESSIO_OPT")==0)
+			plotDecSliceMode = DECVIS_ERROR_LIBPRESSIO_OPT;
+		else
+		{
+			plotDecSliceMode = DECVIS_ERROR_LINEAR_APPROX;
+		}
 		
 		char* CmprString = iniparser_getstring(ini, "PLOT:plotDecCompressors", NULL);
 		
@@ -739,4 +751,59 @@ int modifyZCConfig(StringLine* confLinesHeader, const char* targetAttribute, con
 	return ZC_NSCS;
 }
 
+int delCompressorZCConfig(StringLine* confLinesHeader, const char* compressor)
+{
+	char* delim = " ";
+	char* delim2 = "=";
+	char* delim3 = ":";
+	
+	char* zname;
+	char* p = NULL;
+	char p2[1024], p3[1024];
+	int counter =  0;
+	int i = 0;
+	StringLine* curLine = NULL;
+	StringLine* preLine = confLinesHeader;
+	while(preLine->next!=NULL) //go to the modifyZCConfig line
+	{
+		curLine = preLine->next;
+		if(ZC_startsWithLines(curLine, "compressors")==1)
+		{
+				break;
+		}
+		preLine = preLine->next;
+	}
+	StringLine* modifyLine = curLine;	
+	
+	strcpy(p2, modifyLine->str);
+	
+	strtok(modifyLine->str, delim2); //split by "="
+	char* pp = strtok(NULL, delim2);
+	
+	char cmprs[20][100]; //at most 20 compressors
+	p = strtok(pp, delim);
+	for(counter = 0;p!=NULL;counter++)
+	{
+		strcpy(cmprs[counter],p);
+		p = strtok(NULL, delim);
+	}
 
+	char tmp[1024], p2_[1024];
+	memset(p2_, 0, 1024);
+	for(i=0;i<counter;i++)
+	{
+		p = cmprs[i];
+		strcpy(p3, p);
+		zname = strtok(p3, delim3); //sz_f : ../../SZ...
+		if(strcmp(zname, compressor)!=0)
+		{
+			sprintf(tmp, "%s %s", p2_, p);
+			strcpy(p2_, tmp);
+		}
+	}
+	trim(p2_);
+	printf("compressors=%s\n", p2_);
+	modifyZCConfig(confLinesHeader, "compressors", p2_);
+	
+	return ZC_SCES;
+}

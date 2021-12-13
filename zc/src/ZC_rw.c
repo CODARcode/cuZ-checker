@@ -235,7 +235,6 @@ float *ZC_readFloatData(const char *srcFilePath, size_t *nbEle)
 			ZC_symTransform_4bytes(buf.byte);
 			daBuf[i] = buf.value;
 		}
-        printf("data %lu is %lu\n", byteLength, i);
 		free(bytes);
 		return daBuf;
 	}
