@@ -1,5 +1,5 @@
 # cuZ-checker
-This is the cuda GPU version of Z-checker (https://github.com/CODARcode/Z-checker), a library to characterize the data and check the compression results of lossy compressors
+This is the cuda GPU version of Z-checker (https://github.com/CODARcode/Z-checker), a library to characterize the data and check the compression results of lossy compressors. If you want to use the CPU/MPI version, please download Z-checker: https://github.com/CODARcode/Z-checker. If you want to install Z-checker (CPU version) and its dependencies with one simple command, you can use z-checker-installer (https://github.com/CODARcode/z-checker-installer)
 
 ## Prerequisites
 cmake >= 3.19 <br />
