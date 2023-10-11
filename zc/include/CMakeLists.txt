@@ -6,7 +6,7 @@ set (zc_headers
   der.hpp              matrix.hpp           m_basic.hpp          m_der.hpp            m_der_metrics.hpp
   m_norm.hpp           norm.hpp             others.hpp           ssim.hpp             ZC_ssim.h
   cuZC_entry.h         cuZC_ssim.h          timingGPU.h          cuZC_typeOne.h       cuZC_typeTwo.h
-  cuZC_typeThree.h
+  cuZC_typeThree.h     cuZC_derivatives.h
 )
 
 install (FILES ${zc_headers} DESTINATION include)

@@ -11,6 +11,9 @@ set_target_properties (compareDataSets
                     CUDA_SEPARABLE_COMPILATION ON)
 target_link_libraries (compareDataSets zc)
 
+add_executable (test_cuderivative test_cuderivative.cu)
+target_link_libraries (test_cuderivative zc)
+
 add_executable (generateGNUPlot generateGNUPlot.c)
 target_link_libraries (generateGNUPlot zc)
 

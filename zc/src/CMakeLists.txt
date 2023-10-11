@@ -5,7 +5,7 @@ set (zc_sources
   DynamicIntArray.c        ZC_DataProperty.c          ZC_Hashtable.c           ZC_latex.c               iniparser.c
   ZC_ByteToolkit.c         ZC_DataProperty_double.c   ZC_quicksort.c           zc.c
   zc_derivativeMetrics.cpp ZC_ssim.c                  cuZC_entry.cu            cuZC_ssim.cu             timingGPU.cu
-  cuZC_typeOne.cu          cuZC_typeTwo.cu            cuZC_typeThree.cu
+  cuZC_typeOne.cu          cuZC_typeTwo.cu            cuZC_typeThree.cu        cuZC_derivatives.cu
 )
 set_source_files_properties(ZC_CompareData_double.cpp PROPERTIES LANGUAGE CUDA)
 set_source_files_properties(ZC_CompareData_float.cpp PROPERTIES LANGUAGE CUDA)
