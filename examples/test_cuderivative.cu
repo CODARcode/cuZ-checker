@@ -1,7 +1,8 @@
-#include<iostream>
-#include<iomanip>
-#include<fstream>
-#include<assert.h>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <cassert>
+#include <cinttypes>
 #include"cuZC_derivatives.h"
 
 using namespace std;
@@ -28,32 +29,31 @@ void writeFile(const char *file, const size_t num_elements, Type *data) {
     fout.close();
 }
 
-char f0_file_name[64], f1_file_name[64], buf[64];
-int nx, ny, nz, n;
+char buf[64];
+size_t nx, ny, nz, n;
 
 float *f0, *f1;
 
-signed main() {
+int main(int argc, char *argv[]) {
+    if (argc < 6){
+        printf("test_cuderivative ori_file dec_file nz ny nx (data[nx][ny][nz])\n");
+        exit(0);
+    }
 
-    printf("please input the original file name:\n");
-
-    scanf("%s", f0_file_name);
-
-    printf("please input the unzipped file name:\n");
-
-    scanf("%s", f1_file_name);
-
-    printf("please input the size like [nx] [ny] [nz]:\n");
-
-    scanf("%d %d %d", &nx, &ny, &nz);
+    printf("original file: %s\n", argv[1]);
+    printf("decompressed file: %s\n", argv[2]);
+    nx = strtoimax(argv[5], NULL, 10);
+    ny = strtoimax(argv[4], NULL, 10);
+    nz = strtoimax(argv[3], NULL, 10);
+    printf("data size: nx=%lu ny=%lu nz=%lu\n", nx, ny, nz);
 
     n = nx * ny * nz;
 
     f0 = (float *) malloc(n * sizeof(float));
     f1 = (float *) malloc(n * sizeof(float));
 
-    readFile<float>(f0_file_name, n, f0);
-    readFile<float>(f1_file_name, n, f1);
+    readFile<float>(argv[1], n, f0);
+    readFile<float>(argv[2], n, f1);
 
     vector<float> vec = derivativesPSNR(f0, f1, nx, ny, nz);
 

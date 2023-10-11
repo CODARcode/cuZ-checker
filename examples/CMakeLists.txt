@@ -12,10 +12,6 @@ set_target_properties (compareDataSets
 target_link_libraries (compareDataSets zc)
 
 add_executable (test_cuderivative test_cuderivative.cu)
-set_property(TARGET test_cuderivative PROPERTY CUDA_ARCHITECTURES 70 75)
-set_target_properties (test_cuderivative
-        PROPERTIES
-        CUDA_SEPARABLE_COMPILATION ON)
 target_link_libraries (test_cuderivative zc)
 
 add_executable (generateGNUPlot generateGNUPlot.c)
