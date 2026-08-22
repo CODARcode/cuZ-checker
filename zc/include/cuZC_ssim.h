@@ -2,10 +2,22 @@
 #define CUZC_SSIM_H
 
 #include <stdio.h>
-#include "cuZC_typeOne.h"
- 
-const int N = 16; 
-const int blocksize = 16; 
+#include <cuda_runtime.h>
+
+#ifndef FULL_MASK
+#define FULL_MASK 0xffffffff
+#endif
+
+#ifndef K1
+#define K1 0.01
+#endif
+
+#ifndef K2
+#define K2 0.03
+#endif
+
+const int N = 16;
+const int blocksize = 16;
 
 __inline__ __device__
 int warpReduceSum(int val) {

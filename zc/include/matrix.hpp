@@ -10,8 +10,13 @@
 #define DEBUG_L0 1
 #define DEBUG_CHECK_BOUNDARIES 1
 
+#ifndef K1
 #define K1 0.01
+#endif
+
+#ifndef K2
 #define K2 0.03
+#endif
 
 using namespace std;
 

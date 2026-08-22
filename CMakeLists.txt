@@ -20,7 +20,7 @@ include_directories (${CMAKE_CURRENT_SOURCE_DIR}/zc/include)
 include_directories (/usr/local/cuda/samples/common/inc)
 
 if (NOT DEFINED CMAKE_CUDA_STANDARD)
-    set(CMAKE_CUDA_STANDARD 11)
+    set(CMAKE_CUDA_STANDARD 14)
     set(CMAKE_CUDA_STANDARD_REQUIRED True)
 endif ()
 

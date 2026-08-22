@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+#include <float.h>
 #include "cuZC_ssim.h"
-#include "matrix.hpp"
 
 __global__ void hello(char *a, int *b) 
 {
@@ -55,13 +55,13 @@ double ssim_winComp(float xMin, float xMax, float yMin, float yMax, float xSum, 
         y2Sum = shared[32*7+lane];
         xySum = shared[32*8+lane];
     }else{
-        xMin = 0;  
-        xMax = 0; 
-        yMin = 0; 
-        yMax = 0; 
-        xSum = 0; 
+        xMin = FLT_MAX;
+        xMax = -FLT_MAX;
+        yMin = FLT_MAX;
+        yMax = -FLT_MAX;
+        xSum = 0;
         x2Sum = 0;
-        ySum = 0; 
+        ySum = 0;
         y2Sum = 0;
         xySum = 0;
     }
@@ -136,10 +136,10 @@ __global__ void ssim(float *data1, float *data2, double *results, int r3, int r2
     //    for (Offsety=0; Offsety+ssimSize<=ssimSize; Offsety+=ssimShift){
     //for (Offsetx=36; Offsetx<=36; Offsetx+=ssimShift){
     //    for (Offsety=330; Offsety<=331; Offsety+=ssimShift){
-            xMin = data1[0];  
-            xMax = data1[0]; 
-            yMin = data2[0]; 
-            yMax = data2[0]; 
+            xMin = FLT_MAX;
+            xMax = -FLT_MAX;
+            yMin = FLT_MAX;
+            yMax = -FLT_MAX;
             xSum = 0; 
             x2Sum = 0;
             ySum = 0; 

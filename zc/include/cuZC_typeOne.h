@@ -3,9 +3,9 @@
 
 #include <cuda_runtime.h>
 
-// Utilities and system includes
-#include <helper_cuda.h>  // helper function CUDA error checking and initialization
-#include <helper_functions.h>  // helper for shared functions common to CUDA Samples
+#ifndef checkCudaErrors
+#define checkCudaErrors(val) (val)
+#endif
 
 #define FULL_MASK 0xffffffff
 
